@@ -44608,3 +44608,10 @@
   } catch (e) {}
 })({}, document, location);
 
+// JavaScript to hide the loader when the page loads
+window.onload = function () {
+  const loader = document.getElementById("preloader"); // Replace 'preloader' with your loader ID or class selector
+  if (loader) {
+    loader.style.display = "none"; // Hide the loader
+  }
+};

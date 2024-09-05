@@ -9,12 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#212322" />
     <meta name="author" content="Pixavio Studio" />
-    <meta
-      name="description"
-      content="Somos una Productora audiovisual creamos spots publicitarios, cine, animación digital, servicios de producción, videos corporativos. En Guayaquil y Quito"
-    />
-    <link rel="alternate" hreflang="es" href="https://levector.com" />
-    <link rel="alternate" hreflang="en" href="https://levector.com/en" />
+    <meta name="description" content="" />
     <link rel="preconnect" href="https://cdn.plyr.io" />
     <link rel="preconnect" href="https://player.vimeo.com/" />
     <link rel="preconnect" href="https://d33wubrfki0l68.cloudfront.net" />
@@ -31,14 +26,11 @@
       content="London Lighting - Lighting up somewhere near you!"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/levector-splash.jpg" />
-    <meta
-      property="og:description"
-      content="Somos una Productora audiovisual creamos spots publicitarios, cine, animación digital, servicios de producción, videos corporativos. En Guayaquil y Quito"
-    />
-    <meta property="og:site_name" content="Levector" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Levector2" />
+    <meta name="twitter:site" content="" />
     <meta
       name="twitter:description"
       content="London Lighting - Lighting up somewhere near you!"
@@ -48,6 +40,63 @@
       content="London Lighting - Lighting up somewhere near you!"
     />
     <meta name="twitter:image" content="" />
+    <style>
+      /* Keyframes for sliding animation from left to right */
+      @keyframes slideText {
+        0% {
+          transform: translateX(0); /* Start on the screen from the left */
+        }
+        100% {
+          transform: translateX(-100%); /* Slide off-screen to the right */
+        }
+      }
+    </style>
+    <style>
+      /* Hide the section on screens with a max width of 768px (common breakpoint for tablets and phones) */
+      @media (max-width: 768px) {
+        .hide-on-mobile {
+          display: none;
+        }
+      }
+    </style>
+    <style>
+      /* Prevent horizontal scrolling for the entire page */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Hides horizontal overflow */
+        width: 100%; /* Ensures no elements extend beyond the viewport */
+      }
+
+      /* Ensure all elements respect the width of the viewport */
+      * {
+        box-sizing: border-box; /* Include padding and borders in width/height */
+      }
+
+      /* Wrapper for sliding text to prevent it from causing horizontal scroll */
+      .sliding-text-container {
+        position: relative; /* Position context for absolute positioned child */
+        overflow: hidden; /* Hide any overflow that extends outside the container */
+        width: 100%; /* Ensures it fits the viewport */
+      }
+
+      /* Animated sliding text */
+      .sliding-text {
+        position: absolute; /* Take out of document flow */
+        white-space: nowrap; /* Prevent line breaks */
+        animation: slide 10s linear infinite; /* Infinite sliding animation */
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(100%); /* Start off the screen on the right */
+        }
+        100% {
+          transform: translateX(-100%); /* Slide off the screen on the left */
+        }
+      }
+    </style>
   </head>
   <body>
     <h1 class="sitle-site">
@@ -63,20 +112,7 @@
           align-items: center;
           justify-content: center;
         "
-      >
-        <div
-          class="load-levector"
-          style="
-            font-family: Arial, sans-serif;
-            font-size: 48px;
-            color: white;
-            text-transform: uppercase;
-            text-align: center;
-          "
-        >
-          LONDON LIGHTING
-        </div>
-      </div>
+      ></div>
 
       <div class="layers">
         <div class="layers__item">
@@ -113,47 +149,35 @@
             <div class="menu-li">
               <p class="first principal">Services</p>
               <div class="sub-options">
-                <a href="/spots-publicitarios"><p>ADVERTS</p></a
-                ><a href="/digital"><p>DIGITAL CONTENT</p></a
-                ><a href="/cine-contenido"><p>CINEMA</p></a
-                ><a href="/corporativos"><p>MUSIC VIDEOS</p></a
-                ><a href="/postproduccion"><p>POST PRODUCTION</p></a
-                ><a href="/animacion-2d"><p>2D ANIMATION</p></a
-                ><a href="/servicios_produccion"><p></p></a>
+                <a href="/brand.html"><p>BRANDING</p></a
+                ><a href="/events.html"><p>EVENTS</p></a
+                ><a href="/lighting.html"><p>LIGHTING SERVICES</p></a
+                ><a href="/music.html"><p>MUSIC VIDEOS</p></a
+                ><a href="/music.html"><p>FILM</p></a>
               </div>
             </div>
-            <a class="menu-li" href="/reels"><p class="principal">Reels</p></a>
-            <div class="menu-li">
-              <p class="principal">The Team</p>
-              <div class="sub-options">
-                <a href="/jordan-young"><p>Jordan Young</p></a
-                ><a href="/chad-morris"><p>Chad Morris</p></a
-                ><a href="/johnfa-koke"><p>Johnfa Koke</p></a>
-                <div href="/salim-adam"><p>Salim Adam</p></div>
-                <a href="/teriq-roberts"><p>Teriq Roberts</p></a
-                ><a href="/ismah-ansari"><p>Ismah Ansari</p></a
-                ><a href="/samuel-ismail"><p>Samuel Ismail</p></a
-                ><a href="/lewis-clarke"><p>Lewis Clarke</p></a
-                ><a href="/aksam-kasoma"><p>Aksam Kasoma</p></a>
-              </div>
-            </div>
-            <a class="menu-li" href="/about-us"
-              ><p class="principal">About us</p></a
-            ><a class="menu-li" href="/blog"><p class="principal">Blog</p></a
-            ><a class="menu-li" href="/contacto"
+            <a class="menu-li" href="/about.html">
+              <p class="principal">About Us</p>
+            </a>
+            <a
+              class="menu-li"
+              href="https://londonlightingmasterclass.co.uk/"
+              target="_blank"
+              ><p class="principal">MASTERCLASS</p></a
+            >
+            <a
+              class="menu-li"
+              href="https://www.instagram.com/cosmos_studios1/?hl=en-gb"
+              target="_blank"
+              ><p class="principal">COSMOS STUDIOS</p></a
+            ><a
+              class="menu-li"
+              href="https://www.instagram.com/londonlighting10/"
+              target="_blank"
+              ><p class="principal">instagram</p></a
+            ><a class="menu-li" href="/contact.html"
               ><p class="principal">Contact us</p></a
             >
-            <div class="menu-li">
-              <a class="lang-link" href="en/"><p>EN</p></a>
-            </div>
-          </div>
-        </div>
-        <div class="lang-xs">
-          <div class="menu-li">
-            <p class="last principal">ES</p>
-            <div class="sub-options lang">
-              <a class="lang-link" href="en/"><p>EN</p></a>
-            </div>
           </div>
         </div>
         <div class="icon-cont" id="open-menu">
@@ -169,53 +193,47 @@
         <div class="columns">
           <div class="column">
             <div class="first-row">
-              <h3>Servicios</h3>
-              <a href="/spots-publicitarios"><p>SPOTS PUBLICITARIOS</p></a
-              ><a href="/digital"><p>CONTENIDO DIGITAL</p></a
-              ><a href="/cine-contenido"><p>CINE Y CONTENIDO</p></a
-              ><a href="/corporativos"><p>CORPORATIVOS</p></a
-              ><a href="/postproduccion"><p>POSTPRODUCCIÓN</p></a
-              ><a href="/animacion-2d"><p>ANIMACIÓN 2D</p></a
-              ><a href="/servicios_produccion"
-                ><p>SERVICIOS DE PRODUCCIÓN</p></a
+              <h3>Services</h3>
+              <a href="/brand.html"><p>BRANDING</p></a
+              ><a href="/events.html"><p>EVENTS</p></a
+              ><a href="/lighting.html"><p>LIGHTING SERVICES</p></a
+              ><a href="/music.html"><p>MUSIC VIDEOS</p></a
+              ><a href="/music.html"><p>FILM</p></a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="first-row">
+              <a href="/about.html"><h3 class="sub">About Us</h3></a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="first-row">
+              <a href="https://londonlightingmasterclass.co.uk/" target="_blank"
+                ><h3 class="sub">MASTERCLASS</h3></a
               >
             </div>
           </div>
           <div class="column">
             <div class="first-row">
-              <a href="/reels"><h3 class="sub">Reels</h3></a>
-            </div>
-          </div>
-          <div class="column">
-            <div class="first-row">
-              <h3>Directores</h3>
-              <a href="/oliver-garland"><p>OLIVER GARLAND</p></a
-              ><a href="/pepe-garrido"><p>Pepe Garrido</p></a
-              ><a href="/felipe-rueda"><p>Felipe Rueda</p></a
-              ><a href="/gina-medina"><p>Gina Medina</p></a
-              ><a href="/alejandro-carreno"><p>Alejandro Carreño</p></a
-              ><a href="/franco-verdoia"><p>Franco Verdoia</p></a
-              ><a href="/fede-martirene"><p>Fede Martirené</p></a
-              ><a href="/pipe-delgado"><p>Pipe Delgado</p></a
-              ><a href="/adrian-castro"><p>ADRIÁN CASTRO</p></a
-              ><a href="/david-pimentel"><p>DAVID PIMENTEL</p></a>
-            </div>
-          </div>
-          <div class="column">
-            <div class="first-row">
-              <a href="/quienes-somos"
-                ><h3 class="sub">Quiénes<br />Somos</h3></a
+              <a
+                href="https://www.instagram.com/cosmos_studios1/?hl=en-gb"
+                target="_blank"
+                ><h3 class="sub">COSMOS<br />STUDIOS</h3></a
               >
             </div>
           </div>
           <div class="column">
             <div class="first-row">
-              <a href="/blog"><h3 class="sub">Blog</h3></a>
+              <a
+                href="https://www.instagram.com/londonlighting10/"
+                target="_blank"
+                ><h3 class="sub">instagram</h3></a
+              >
             </div>
           </div>
           <div class="column">
             <div class="first-row">
-              <a href="/contacto"><h3 class="sub">Contacto</h3></a>
+              <a href="/contact.html"><h3 class="sub">Contact</h3></a>
             </div>
           </div>
         </div>
@@ -226,6 +244,55 @@
       <div data-controller="index">
         <section>
           <div class="banner-cont">
+            <!-- Sliding Text Container -->
+            <div
+              style="
+                position: absolute;
+                bottom: 10%;
+                width: 200%; /* Double the width for two texts */
+                text-align: left;
+                overflow: hidden;
+                z-index: 10;
+                display: flex; /* Flexbox to align text items in a row */
+                pointer-events: none;
+              "
+            >
+              <!-- First Text Element -->
+              <h1
+                style="
+                  font-size: 10vw;
+                  font-weight: bold;
+                  color: white;
+                  white-space: nowrap;
+                  display: inline-block;
+                  position: relative;
+                  animation: slideText 15s linear infinite;
+                  animation-timing-function: linear;
+                  margin-right: 5vw;
+                "
+              >
+                <!-- Space between the two texts -->
+                Illuminating Your Vision with Precision -
+              </h1>
+
+              <!-- Duplicate Text Element for Seamless Loop -->
+              <h1
+                style="
+                  font-size: 10vw;
+                  font-weight: bold;
+                  color: white;
+                  white-space: nowrap;
+                  display: inline-block;
+                  position: relative;
+                  animation: slideText 15s linear infinite;
+                  animation-timing-function: linear;
+                  margin-right: 5vw;
+                "
+              >
+                <!-- Space between the two texts -->
+                Illuminating Your Vision with Precision -
+              </h1>
+            </div>
             <div class="splide" id="splide-index">
               <div class="splide__track">
                 <ul class="splide__list">
@@ -238,18 +305,17 @@
                         loop=""
                         playsinline=""
                       >
-                        <source src="media/jager.mp4" type="video/mp4" />
+                        <source src="media/Jager.mp4" type="video/mp4" />
                       </video>
                       <div class="filter"></div>
                       <div class="text-service">
                         <a
-                          href="/player/861651914/Pepsi%20-%20Sed%20de%20más%20-%20Street%20food"
                           ><p>
                             <span class="word"
                               >Lighting for: <b>jagermeister UK</b></span
                             >
                           </p>
-                          <h2 data-splitting="">"Ice Cold"</h2>
+                          <h2 data-splitting=""></h2>
                           <p>
                             <span class="word"><b></b></span>
                           </p>
@@ -273,13 +339,12 @@
                       <div class="filter"></div>
                       <div class="text-service">
                         <a
-                          href="/player/851450780/Banco%20del%20Pac%C3%ADfico%20-%20Si%20te%20quieres%20lanzar%2C%20l%C3%A1nzate"
                           ><p>
                             <span class="word"
                               >LIGHTING FOR: <b>GOOGLE UK</b></span
                             >
                           </p>
-                          <h2 data-splitting="">"Pixel 8"</h2>
+                          <h2 data-splitting=""></h2>
                           <p>
                             <span class="word"><b></b></span>
                           </p>
@@ -302,14 +367,14 @@
                       </video>
                       <div class="filter"></div>
                       <div class="text-service">
-                        <a href="/player/829128994/Fuze%20Tea%20-%20Herbales"
+                        <a
                           ><p>
                             <span class="word"
                               >Lighting for:
                               <b> Chris Brown & Jack Harlow </b></span
                             >
                           </p>
-                          <h2 data-splitting="">"Psychic"</h2>
+                          <h2 data-splitting=""></h2>
                           <p>
                             <span class="word"><b></b></span>
                           </p>
@@ -333,13 +398,12 @@
                       <div class="filter"></div>
                       <div class="text-service">
                         <a
-                          href="/player/845443872/Banco%20Pichincha%20-%20Effort%20Defines%20You"
                           ><p>
                             <span class="word"
                               >Lighting for: <b> Stefflon Don x Blok3</b></span
                             >
                           </p>
-                          <h2 data-splitting="">"Habibi"</h2>
+                          <h2 data-splitting=""></h2>
                           <p>
                             <span class="word"><b></b></span>
                           </p>
@@ -356,14 +420,7 @@
           </div>
         </section>
 
-        <section
-          style="
-            display: flex;
-            flex-direction: column;
-            gap: 0px;
-            padding: 0px 0px;
-          "
-        >
+        <section class="hide-on-mobile">
           <div
             class="hover-effect"
             style="
@@ -392,7 +449,7 @@
               </p>
             </div>
             <a
-              href="#"
+              href="/brand.html"
               style="
                 text-decoration: none;
                 padding: 10px 20px;
@@ -434,7 +491,7 @@
               </p>
             </div>
             <a
-              href="#"
+              href="/events.html"
               style="
                 text-decoration: none;
                 padding: 10px 20px;
@@ -519,7 +576,7 @@
               </p>
             </div>
             <a
-              href="#"
+              href="/music.html"
               style="
                 text-decoration: none;
                 padding: 10px 20px;
@@ -565,6 +622,7 @@
         </style>
 
         <section
+          id="adverts"
           style="
             color: white;
             padding: 50px 50px 150px 50px;
@@ -1183,60 +1241,12 @@
                     object-fit: cover;
                   "
                 >
-                  <source src="media/2.mov" type="video/mp4" />
-                </video>
-              </div>
-              <div style="position: relative">
-                <video
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  style="
-                    border-radius: 10px;
-                    width: 620px;
-                    height: 400px;
-                    object-fit: cover;
-                  "
-                >
-                  <source src="media/3.mov" type="video/mp4" />
-                </video>
-              </div>
-              <div style="position: relative">
-                <video
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  style="
-                    border-radius: 10px;
-                    width: 300px;
-                    height: 200px;
-                    object-fit: cover;
-                  "
-                >
-                  <source src="media/2.mov" type="video/mp4" />
-                </video>
-              </div>
-              <div style="position: relative">
-                <video
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  style="
-                    border-radius: 10px;
-                    width: 300px;
-                    height: 200px;
-                    object-fit: cover;
-                  "
-                >
-                  <source src="media/2.mov" type="video/mp4" />
+                  <source src="media/Google.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
             <div style="max-width: 600px; margin: auto">
-              <h1 style="font-size: 2.5em; margin: 0">
+              <h1 id="cosmosstudios" style="font-size: 2.5em; margin: 0">
                 Transform your ideas in our
                 <span style="color: orange">warehouse</span> in South London
               </h1>
@@ -1250,7 +1260,7 @@
           </div>
         </section>
 
-        <section class="featured-collections">
+        <section id="lightingservices" class="featured-collections">
           <div class="container">
             <div class="header">Lighting Services</div>
             <div class="collections" id="collections">
@@ -1374,6 +1384,7 @@
         </style>
 
         <section
+          id="musicvideos"
           style="
             position: relative;
             width: 100%;
@@ -1630,35 +1641,54 @@
           background-color: black;
           color: #ffa500;
           text-align: center;
-          padding-top: 100px;
+          padding: 5vh 2vw; /* Use viewport-based units for padding */
           font-family: Arial, sans-serif;
+          position: relative; /* Use relative positioning for proper alignment */
         "
       >
+        <!-- Placeholder div for additional content -->
         <div
           style="
-            font-size: 20px;
+            font-size: 1.2rem; /* Use rem for font size */
             font-weight: normal;
             letter-spacing: normal;
             position: absolute;
-            top: 0;
+            top: 10px; /* Adjusted for responsiveness */
             right: 20px;
             color: white;
           "
         ></div>
+
+        <!-- Main content container -->
         <div
           style="
             background-color: black;
             color: white;
             text-align: center;
-            padding-top: 50px;
+            padding: 3vh 0; /* Use viewport-based units for padding */
             font-family: Arial, sans-serif;
           "
         >
-          <h2 style="font-size: 70px; font-weight: normal; margin-bottom: 40px">
+          <h2
+            style="
+              font-size: 6vw; /* Use vw for font size to adjust with viewport */
+              font-weight: normal;
+              margin-bottom: 4vh; /* Use viewport-based units for margin */
+            "
+          >
             ABOUT US
           </h2>
         </div>
-        <div style="font-size: 150px; font-weight: bold; letter-spacing: -5px">
+
+        <!-- Title text with responsive font size -->
+        <div
+          style="
+            font-size: 12vw; /* Use vw for font size for responsiveness */
+            font-weight: bold;
+            letter-spacing: -0.2vw; /* Adjust letter spacing */
+            line-height: 1.1; /* Improve line height for better readability */
+          "
+        >
           LONDON LIGHTING
         </div>
       </section>
@@ -1743,6 +1773,7 @@
       </section>
 
       <section
+        id="masterclass"
         style="
           color: white;
           padding: 50px 50px 150px 50px;
@@ -1755,32 +1786,20 @@
           overflow: hidden;
         "
       >
-        <!-- Background Video -->
-        <video
-          autoplay
-          loop
-          muted
-          playsinline
+        <!-- Background Image -->
+        <div
           style="
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            background-image: url('media/mcc.jpg');
+            background-size: cover;
+            background-position: center;
             z-index: -1;
           "
-          onloadedmetadata="this.currentTime = 0"
-          ontimeupdate="if(this.currentTime > 7){this.currentTime = 0; this.play();}"
-        >
-          <source src="media/2.mov" type="video/mp4" />
-          <!-- Fallback image for older browsers -->
-          <img
-            src="path_to_your_fallback_image.jpg"
-            alt="Fallback Image"
-            style="width: 100%; height: 100%; object-fit: cover"
-          />
-        </video>
+        ></div>
 
         <div style="flex: 1; min-width: 300px; margin-right: 20px">
           <h1 style="font-size: 50px; line-height: 1.2; margin: 0">
@@ -1790,7 +1809,8 @@
           </h1>
 
           <a
-            href="#"
+            href="https://londonlightingmasterclass.co.uk/"
+            target="_blank"
             style="
               display: inline-block;
               margin-top: 20px;
@@ -1880,7 +1900,13 @@
                 >
                   <i class="fas fa-arrow-right" style="font-size: 20px"></i>
                 </div>
-                <span style="font-size: 16px">Get free consultation</span>
+                <a
+                  style="color: #ffa500"
+                  href="https://londonlightingmasterclass.co.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Click Here to Learn More</a
+                >
               </div>
             </div>
             <div style="flex: 1; position: relative">
