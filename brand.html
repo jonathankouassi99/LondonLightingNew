@@ -195,298 +195,160 @@
     </div>
 
     <div data-scroll-container="">
-      <div data-controller="index">
-        <section
-          id="adverts"
+      <section
+        id="musicvideos"
+        style="
+          position: relative;
+          width: 100%;
+          height: 50vh;
+          background-color: #1a1a1a;
+        "
+      >
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
           style="
-            color: white;
-            padding: 50px 50px 150px 50px;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            align-items: stretch;
-            position: relative;
-            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
           "
         >
-          <!-- Background Video -->
-          <video
-            autoplay
-            loop
-            muted
-            playsinline
-            style="
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              z-index: -1;
-            "
-            onloadedmetadata="this.currentTime = 0"
-            ontimeupdate="if(this.currentTime > 2){this.currentTime = 0; this.play();}"
-          >
-            <source src="media/cano.mp4" type="video/mp4" />
-            <!-- Fallback image for older browsers -->
-            <img
-              src="path_to_your_fallback_image.jpg"
-              alt="Fallback Image"
-              style="width: 100%; height: 100%; object-fit: cover"
-            />
-          </video>
-
-          <div
-            style="
-              flex: 1;
-              min-width: 300px;
-              margin-right: 20px;
-              margin-top: 90px;
-            "
-          >
+          <source src="media/cano.mp4" type="video/mp4" />
+          <!-- Fallback image for older browsers -->
+          <img
+            src="https://replicate.delivery/yhqm/JSVeyyp5BIQAbSZ71dNkAqpJgLgoWsUEeY7P5dxEkaeyQlhmA/out-0.png"
+            alt="Fallback Image"
+          />
+        </video>
+        <div
+          style="
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            max-width: 600px;
+            padding-left: 50px;
+            margin-top: 50px;
+          "
+        >
+          <div style="flex: 1; min-width: 300px; margin-right: 20px">
             <h1 style="font-size: 50px; line-height: 1.2; margin: 0">
-              ELEVATING <span style="color: orange">BRANDS</span>,<br />
-              CRAFTING VISUAL<br />
-              MASTERPIECES.
-              <span style="text-decoration: line-through"></span>
+              <span style="color: orange">ELEVATING BRANDS</span>
+              CRAFTING VISUAL MASTERPIECES.
             </h1>
-
-            <a
-              href="/contact.html"
-              style="
-                display: inline-block;
-                margin-top: 20px;
-                padding: 10px 20px;
-                background-color: #000000;
-                color: rgb(255, 255, 255);
-                text-decoration: none;
-                font-weight: bold;
-                border-radius: 5px;
-                transition: background-color 0.3s;
-              "
-              onmouseover="this.style.backgroundColor='#FFA500';"
-              onmouseout="this.style.backgroundColor='#000000';"
-            >
-              Book Now
-            </a>
           </div>
-
-          <div
+          <a
+            href="https://wa.me/447407603907"
             style="
-              flex: 1;
-              min-width: 300px;
-              display: flex;
-              align-items: center;
-              height: auto;
+              display: inline-block;
+              margin-top: 20px;
+              padding: 15px 30px; /* Increase the button size */
+              background-color: #000000;
+              color: rgb(255, 255, 255);
+              text-decoration: none;
+              font-weight: bold;
+              border-radius: 5px;
+              font-size: 20px; /* Increase the font size */
+              transition: background-color 0.3s ease;
             "
+            onmouseover="this.style.backgroundColor='#FFA500'"
+            onmouseout="this.style.backgroundColor='#000000'"
           >
-            <p
+            Book Now
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <div
+          class="image-grid"
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0;
+            width: 100vw;
+            padding-bottom: 0px;
+          "
+        >
+          <div
+            class="image-item"
+            style="position: relative; width: 100%; height: 100%"
+          >
+            <img
+              class="image"
               style="
-                font-size: 16px;
-                line-height: 1.5;
-                margin-top: 0;
+                width: 100%;
                 height: 100%;
-                display: flex;
-                align-items: center;
+                object-fit: cover;
+                cursor: pointer;
               "
-            ></p>
+              src="images/dysonarsenal.png"
+              alt="Style Image"
+            />
           </div>
-        </section>
 
-        <section>
           <div
-            class="video-grid"
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              grid-template-rows: 1fr 1fr;
-              gap: 0;
-              width: 100vw;
-              padding-bottom: 0px;
-            "
+            class="image-item"
+            style="position: relative; width: 100%; height: 100%"
           >
-            <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
-            >
-              <video
-                id="video-thumbnail"
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                  background-color: black;
-                "
-                src="media/google.mp4"
-                type="video/mp4"
-                poster="images/googlethumbnail.png"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(document.getElementById('video-thumbnail'))"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
-              >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
-            </div>
-            <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
-            >
-              <video
-                id="video-thumbnail"
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                  background-color: black;
-                "
-                src="media/cano.mp4"
-                type="video/mp4"
-                poster="images/cano1.png"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(document.getElementById('video-thumbnail'))"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
-              >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
-            </div>
-
-            <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
-            >
-              <video
-                id="video-thumbnail"
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                  background-color: black;
-                "
-                src="images/nikespotify.mp4"
-                type="video/mp4"
-                poster="images/nikespotify.png"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(document.getElementById('video-thumbnail'))"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
-              >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
-            </div>
-            <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
-            >
-              <video
-                id="video-thumbnail"
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                  background-color: black;
-                "
-                src="media/dysonarsenal.mp4"
-                type="video/mp4"
-                poster="images/dysonarsenal.png"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(document.getElementById('video-thumbnail'))"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
-              >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
-            </div>
+            <img
+              class="image"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+              "
+              src="images/cano1.png"
+              alt="Nem Image"
+            />
           </div>
-        </section>
 
-        <script>
-          function togglePlay(element) {
-            const video =
-              element.tagName === "VIDEO"
-                ? element
-                : element.previousElementSibling;
-            const button = video.nextElementSibling;
+          <div
+            class="image-item"
+            style="position: relative; width: 100%; height: 100%"
+          >
+            <img
+              class="image"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+              "
+              src="images/nikespotify.png"
+              alt="M24 Image"
+            />
+          </div>
 
-            if (video.paused) {
-              video.play();
-              button.style.display = "none";
-            } else {
-              video.pause();
-              button.style.display = "flex";
-            }
-          }
-        </script>
+          <div
+            class="image-item"
+            style="position: relative; width: 100%; height: 100%"
+          >
+            <img
+              class="image"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+              "
+              src="images/googlethumbnail.png"
+              alt="Tion Image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div data-controller="index">
         <section
           style="
             background-color: #000;
@@ -499,15 +361,15 @@
           "
         >
           <div style="text-align: center">
-            <h1 style="font-size: 4em; margin: 0" id="count1">0</h1>
+            <h1 style="font-size: 4em; margin: 0" id="count1">2000</h1>
             <p style="font-size: 1.2em; margin: 0">Projects Completed</p>
           </div>
           <div style="text-align: center">
-            <h1 style="font-size: 4em; margin: 0" id="count2">0</h1>
+            <h1 style="font-size: 4em; margin: 0" id="count2">5</h1>
             <p style="font-size: 1.2em; margin: 0">Years Experince</p>
           </div>
           <div style="text-align: center">
-            <h1 style="font-size: 4em; margin: 0" id="count3">0</h1>
+            <h1 style="font-size: 4em; margin: 0" id="count3">10</h1>
             <p style="font-size: 1.2em; margin: 0">
               Industry Awards Won <span style="font-size: 1.2em"></span>
             </p>
