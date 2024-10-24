@@ -196,119 +196,228 @@
 
     <div data-scroll-container="">
       <section
-        id="adverts"
+        id="musicvideos"
         style="
-          color: white;
-          padding: 50px 50px 150px 50px;
-          font-family: Arial, sans-serif;
-          display: flex;
-          flex-wrap: nowrap;
-          justify-content: space-between;
-          align-items: stretch;
           position: relative;
-          overflow: hidden;
+          width: 100%;
+          height: 50vh;
+          background-color: #1a1a1a;
+          display: flex;
+          align-items: center; /* Center content vertically */
+          justify-content: center; /* Center content horizontally */
+          box-sizing: border-box; /* Ensures padding is included in width calculations */
         "
       >
-        <!-- Background Video -->
         <img
           src="media/pe.jpg"
-          alt="Background Image"
+          alt="Fallback Image"
           style="
             position: absolute;
-            top: 50px; /* Adjust this value to move the image lower */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1;
+            z-index: 1;
           "
         />
 
         <div
           style="
-            flex: 1;
-            min-width: 300px;
-            margin-right: 20px;
-            margin-top: 90px;
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            max-width: 80%; /* Responsive width */
+            margin: 0 auto; /* Center horizontally */
+            box-sizing: border-box;
           "
         >
-          <h1 style="font-size: 50px; line-height: 1.2; margin: 0">
-            CREATING EXPERIENCES, UNFORGETTABLE
-            <span style="color: orange">EVENTS.</span>
-          </h1>
+          <div style="flex: 1; min-width: 300px; margin-right: 20px">
+            <h1 style="line-height: 1.2; margin: 0" class="responsive-heading">
+              <span style="color: orange">ELEVATING EVENTS</span> CREATING
+              MEMORABLE MOMENTS.
+            </h1>
+          </div>
+
+          <style>
+            /* Default font size for larger screens */
+            .responsive-heading {
+              font-size: 4vw;
+            }
+
+            /* Media query for mobile screens */
+            @media (max-width: 768px) {
+              .responsive-heading {
+                font-size: 30vw;
+              }
+            }
+          </style>
 
           <a
-            href="https://wa.me/447852322560"
+            href="https://wa.me/447407603907"
             style="
               display: inline-block;
               margin-top: 20px;
-              padding: 10px 20px;
+              padding: 1vw 2vw; /* Adjust padding using viewport width */
               background-color: #000000;
               color: rgb(255, 255, 255);
               text-decoration: none;
               font-weight: bold;
               border-radius: 5px;
-              transition: background-color 0.3s;
+              font-size: 1.5vw; /* Use viewport width for font size */
+              transition: background-color 0.3s ease;
             "
-            onmouseover="this.style.backgroundColor='#FFA500';"
-            onmouseout="this.style.backgroundColor='#000000';"
+            onmouseover="this.style.backgroundColor='#FFA500'"
+            onmouseout="this.style.backgroundColor='#000000'"
           >
             Book Now
           </a>
         </div>
+      </section>
 
-        <div
+      <!-- CSS Styles for Responsiveness -->
+      <style>
+        /* Media query for mobile screens */
+        @media (max-width: 768px) {
+          #musicvideos h1 {
+            font-size: 6vw; /* Use viewport width to scale title text */
+          }
+
+          #musicvideos a {
+            font-size: 3.5vw; /* Adjust button text size for mobile */
+            padding: 3vw 4vw; /* Adjust button padding for mobile */
+          }
+
+          .image-grid {
+            grid-template-columns: 1fr; /* Stack images on smaller screens */
+          }
+        }
+      </style>
+
+      <div data-controller="index">
+        <section
           style="
-            flex: 1;
-            min-width: 300px;
+            background-color: #000;
+            color: #fff;
             display: flex;
+            justify-content: space-around;
             align-items: center;
-            height: auto;
+            padding: 50px 0;
+            font-family: Arial, sans-serif;
           "
         >
-          <p
+          <div style="text-align: center">
+            <h1 style="font-size: 4em; margin: 0" id="count1">2000</h1>
+            <p style="font-size: 1.2em; margin: 0">Projects Completed</p>
+          </div>
+          <div style="text-align: center">
+            <h1 style="font-size: 4em; margin: 0" id="count2">5</h1>
+            <p style="font-size: 1.2em; margin: 0">Years Experince</p>
+          </div>
+          <div style="text-align: center">
+            <h1 style="font-size: 4em; margin: 0" id="count3">10</h1>
+            <p style="font-size: 1.2em; margin: 0">
+              Industry Awards Won <span style="font-size: 1.2em"></span>
+            </p>
+          </div>
+        </section>
+
+        <script>
+          function animateValue(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            const range = end - start;
+            let startTime = null;
+
+            function step(timestamp) {
+              if (!startTime) startTime = timestamp;
+              const progress = Math.min((timestamp - startTime) / duration, 1);
+              obj.innerHTML = Math.floor(progress * range + start);
+              if (progress < 1) {
+                window.requestAnimationFrame(step);
+              }
+            }
+
+            window.requestAnimationFrame(step);
+          }
+
+          document.addEventListener("DOMContentLoaded", function () {
+            animateValue("count1", 0, 2000, 2000);
+            animateValue("count2", 0, 5, 2000);
+            animateValue("count3", 0, 10, 2000);
+          });
+        </script>
+        <section
+          style="
+            background-color: black;
+            color: white;
+            padding-left: 120px;
+            padding-right: 120px;
+            font-family: Arial, sans-serif; /* Standard sans-serif font */
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: stretch; /* Ensure both sides have the same height */
+          "
+        >
+          <div
             style="
-              font-size: 16px;
-              line-height: 1.5;
-              margin-top: 0;
-              height: 100%;
+              flex: 1;
+              min-width: 300px;
               display: flex;
               align-items: center;
+              height: auto;
             "
-          ></p>
-        </div>
-      </section>
-      <div data-controller="index">
+          >
+            <p
+              style="
+                font-size: 16px;
+                line-height: 1.5;
+                margin-top: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+              "
+            ></p>
+          </div>
+        </section>
+
+        <!-- First Section -->
         <section
           style="
             background-color: #000000; /* Dark black background */
             color: #ffffff;
-            font-family: Arial, sans-serif; /* Standard sans-serif font */
+            font-family: Arial, sans-serif;
             display: flex;
-            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            flex-wrap: wrap; /* Allow content to wrap on smaller screens */
             justify-content: space-between; /* Align items to the left and right */
             align-items: center;
-            padding: 50px 5%; /* Adjust padding for different screen sizes */
+            padding: 50px 5%; /* Same padding for both sections */
             margin: 0;
-            box-sizing: border-box; /* Include padding and border in element's total width and height */
+            box-sizing: border-box; /* Include padding and border in element's total width */
           "
         >
           <!-- Left Side: "Why Us?" -->
           <div
             style="
               flex: 1;
+              min-width: 300px;
               text-align: left;
-              padding-right: 20px;
-              min-width: 250px;
               margin-bottom: 20px;
+              padding-right: 20px;
             "
+            class="why-us"
           >
             <h2
               style="
                 font-size: 2.2rem; /* Responsive font size */
                 margin-bottom: 20px;
-                font-family: Arial, sans-serif;
+                padding-left: clamp(
+                  10px,
+                  5vw,
+                  50px
+                ); /* Responsive left padding */
               "
             >
               Why Us?
@@ -319,14 +428,15 @@
           <div
             class="testimonial-container"
             style="
-              text-align: left;
+              flex: 1;
               max-width: 600px;
-              width: 100%; /* Make it responsive */
+              text-align: left;
               padding: 20px;
               background-color: #1a1a1a; /* Slightly lighter background */
               border-radius: 10px;
               font-family: Arial, sans-serif; /* Ensure consistency */
               margin-bottom: 20px;
+              box-sizing: border-box; /* Include padding in width */
             "
           >
             <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px">
@@ -339,6 +449,15 @@
             </p>
           </div>
         </section>
+
+        <!-- Media Queries for Mobile Responsiveness -->
+        <style>
+          @media (max-width: 768px) {
+            .why-us h2 {
+              padding-left: 0; /* Remove left padding on mobile */
+            }
+          }
+        </style>
 
         <section
           style="
@@ -614,129 +733,49 @@
           style="
             background-color: black;
             color: white;
-
-            padding-left: 120px;
-            padding-right: 120px;
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            align-items: stretch; /* Ensure both sides have the same height */
+            padding: 50px 0;
+            position: relative;
           "
         >
           <div
             style="
-              flex: 1;
-              min-width: 300px;
-              display: flex;
-              align-items: center;
-              height: auto;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: rotate(-90deg);
+              transform-origin: left top 0;
+              font-size: 4em;
+              color: rgba(255, 255, 255, 0.1);
             "
           >
-            <p
-              style="
-                font-size: 16px;
-                line-height: 1.5;
-                margin-top: 0;
-                height: 100%;
-                display: flex;
-                align-items: center;
-              "
-            ></p>
+            CAMERA
           </div>
-        </section>
-        <section
-          style="
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 60px 20px;
-            background-color: #000;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-          "
-        >
-          <div
-            class="content"
-            style="display: flex; max-width: 1200px; width: 100%"
-          >
+          <div style="text-align: center">
             <div
-              class="image-section"
               style="
-                flex: 1;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
-                align-items: center;
+                gap: 10px;
+                margin-bottom: 20px;
               "
-            >
-              <img
-                src="https://replicate.delivery/yhqm/uNGqXh6iex2TLaU7zkRafMZzlpPg0ccYDq9kzI47KX0fmmhmA/out-0.png"
-                alt="A man standing on a wooden stool with a patterned rug behind him"
-                style="max-width: 100%; height: auto"
-              />
-            </div>
-            <div class="text-section" style="flex: 1; padding: 20px">
-              <h1
-                style="
-                  font-family: 'Playfair Display', serif;
-                  font-size: 2.5em;
-                  margin: 0 0 20px;
-                "
-              >
-                Unmatched Expertise.
-                <i>Always.</i>
+            ></div>
+            <div style="max-width: 600px; margin: auto">
+              <h1 id="cosmosstudios" style="font-size: 2.5em; margin: 0">
+                Transform your ideas in our
+                <span style="color: orange">warehouse</span> in South London
               </h1>
-              <p style="font-size: 1.1em; line-height: 1.6; margin: 0 0 20px">
-                We push industry boundaries with the latest technology, ensuring
-                your project captivates and stands out.
-              </p>
-              <hr
-                style="border: 0; border-top: 1px solid #555; margin: 20px 0"
-              />
-              <h1
-                style="
-                  font-family: 'Playfair Display', serif;
-                  font-size: 2.5em;
-                  margin: 0 0 20px;
-                "
-              >
-                Comprehensive, Tailored
-                <i>Services.</i>
-              </h1>
-              <p style="font-size: 1.1em; line-height: 1.6; margin: 0 0 20px">
-                We handle everything from planning to post-production,
-                delivering a seamless, polished product aligned with your brand.
-              </p>
-              <hr
-                style="border: 0; border-top: 1px solid #555; margin: 20px 0"
-              />
-              <h1
-                style="
-                  font-family: 'Playfair Display', serif;
-                  font-size: 2.5em;
-                  margin: 0 0 20px;
-                "
-              >
-                Proven Excellence with
-                <i>Results.</i>
-              </h1>
-              <p style="font-size: 1.1em; line-height: 1.6; margin: 0 0 20px">
-                Our success with top artists and brands guarantees your project
-                meets deadlines and exceeds market expectations.
+
+              <p style="font-size: 1.2em; color: rgba(255, 255, 255, 0.7)">
+                Experience world-class production in our fully-equipped
+                warehouse studio. With state-of-the-art lighting, soundproofing,
+                and versatile set-building areas, our space is tailored for
+                seamless creative and commercial shoots.
               </p>
             </div>
           </div>
         </section>
-
-        <style>
-          .hover-word {
-            transition: color 0.3s;
-          }
-
-          .hover-word:hover {
-            color: orange;
-          }
-        </style>
 
         <section id="lightingservices" class="featured-collections">
           <div class="container">
@@ -747,13 +786,7 @@
                   alt="A person in a red outfit posing outdoors"
                   src="https://replicate.delivery/yhqm/t7CxxjXOC2rFMdOHQFat62QjfEZ7hDuCX6U58nPelWPAX0QTA/out-0.png"
                   style="object-position: 50% 35%"
-                  Adjust
-                  the
-                  image
-                  position
-                  --
                 />
-
                 <div class="collection-title">Content Marketing</div>
                 <div class="collection-description">
                   Engage audiences with valuable content to build brand trust.
@@ -764,13 +797,7 @@
                   alt="A person in a red outfit sitting indoors"
                   src="https://replicate.delivery/yhqm/bF5igj6iaF5JLNYcupSV6T8rbO9zx7KwN1iqXdyWL2DwFN0E/out-0.png"
                   style="object-position: 50% 50%"
-                  Adjust
-                  the
-                  image
-                  position
-                  --
                 />
-
                 <div class="collection-title">Campaigning</div>
                 <div class="collection-description">
                   Execute targeted campaigns to effectively promote and drive
@@ -786,6 +813,7 @@
           </div>
         </section>
 
+        <!-- CSS Styling -->
         <style>
           body {
             margin: 0;
@@ -793,55 +821,70 @@
             background-color: #121212;
             color: #ffffff;
           }
+
+          /* Featured Collection Section */
           .featured-collections {
-            padding: 50px 20px;
+            padding: 5vw 3vw; /* Adjust padding using viewport width */
           }
+
           .container {
             position: relative;
           }
+
           .header {
-            font-size: 48px;
+            font-size: 3vw; /* Reduce font size for larger screens */
             font-weight: bold;
             margin-bottom: 20px;
           }
+
+          /* Collections Flexbox Layout */
           .collections {
             display: flex;
             gap: 20px;
             overflow: hidden;
             scroll-behavior: smooth;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
           }
+
+          /* Individual Collection Styling */
           .collection {
             position: relative;
-            min-width: 50%;
+            flex: 1 1 calc(50% - 20px); /* Each collection takes 50% of the width minus gap */
             transition: transform 0.3s ease-in-out;
             text-decoration: none;
             color: white;
           }
+
           .collection img {
             width: 100%;
-            height: 336px;
+            height: auto;
             object-fit: cover;
             display: block;
             transition: filter 0.3s ease-in-out;
           }
+
           .collection:hover img {
             filter: brightness(70%);
           }
+
           .collection-title {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 36px;
+            font-size: 2vw; /* Responsive text using viewport width */
             font-weight: bold;
             text-align: center;
           }
+
           .collection-description {
             margin-top: 10px;
-            font-size: 16px;
+            font-size: 1.2vw; /* Responsive text size */
             color: #b3b3b3;
             text-align: center;
           }
+
+          /* Navigation Arrows */
           .navigation {
             position: absolute;
             top: 50%;
@@ -851,114 +894,125 @@
             transform: translateY(-50%);
             pointer-events: none;
           }
+
           .navigation i {
-            font-size: 24px;
+            font-size: 2vw; /* Responsive icon size */
             cursor: pointer;
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
+            padding: 1vw; /* Responsive padding */
             border-radius: 50%;
             pointer-events: all;
             color: white;
           }
-        </style>
 
-        <script>
-          function togglePlay(element) {
-            const video =
-              element.tagName === "VIDEO"
-                ? element
-                : element.previousElementSibling;
-            const button = video.nextElementSibling;
+          /* Media Queries for Mobile Responsiveness */
+          @media (max-width: 768px) {
+            .header {
+              font-size: 6vw; /* Larger header font size for mobile */
+            }
 
-            if (video.paused) {
-              video.play();
-              button.style.display = "none";
-            } else {
-              video.pause();
-              button.style.display = "flex";
+            .collection {
+              flex: 1 1 100%; /* Full width for collections on mobile */
+            }
+
+            .collection-title {
+              font-size: 5vw; /* Adjust collection title size */
+            }
+
+            .collection-description {
+              font-size: 3vw; /* Adjust description size */
+            }
+
+            .navigation i {
+              font-size: 5vw; /* Adjust icon size for mobile */
             }
           }
-        </script>
-      </div>
+        </style>
 
-      <section
-        id="masterclass"
-        style="
-          color: white;
-          padding: 50px 50px 150px 50px;
-          font-family: Arial, sans-serif;
-          display: flex;
-          flex-wrap: nowrap;
-          justify-content: space-between;
-          align-items: stretch;
-          position: relative;
-          overflow: hidden;
-        "
-      >
-        <!-- Background Image -->
-        <div
+        <section
+          id="masterclass"
           style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('media/mcc.jpg');
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-          "
-        ></div>
-
-        <div style="flex: 1; min-width: 300px; margin-right: 20px">
-          <h1 style="font-size: 50px; line-height: 1.2; margin: 0">
-            UNLOCK CREATIVITY,<br />
-            MASTER FILMMAKING,<br />
-            <span style="color: orange">MASTERCLASS</span> AWAITS.
-          </h1>
-
-          <a
-            href="https://londonlightingmasterclass.co.uk/"
-            target="_blank"
-            style="
-              display: inline-block;
-              margin-top: 20px;
-              padding: 10px 20px;
-              background-color: #000000;
-              color: rgb(255, 255, 255);
-              text-decoration: none;
-              font-weight: bold;
-              border-radius: 5px;
-              transition: background-color 0.3s;
-            "
-            onmouseover="this.style.backgroundColor='#FFA500';"
-            onmouseout="this.style.backgroundColor='#000000';"
-          >
-            Enquire
-          </a>
-        </div>
-
-        <div
-          style="
-            flex: 1;
-            min-width: 300px;
+            color: white;
+            padding: 5vw; /* Relative padding */
+            font-family: Arial, sans-serif;
             display: flex;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            justify-content: space-between;
             align-items: center;
-            height: auto;
+            position: relative;
+            overflow: hidden;
           "
         >
-          <p
+          <!-- Background Image -->
+          <div
             style="
-              font-size: 16px;
-              line-height: 1.5;
-              margin-top: 0;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
               height: 100%;
-              display: flex;
-              align-items: center;
+              background-image: url('media/mcc.jpg');
+              background-size: cover;
+              background-position: center;
+              z-index: -1;
             "
-          ></p>
-        </div>
-      </section>
+          ></div>
+
+          <div
+            style="flex: 1; min-width: 300px; margin-right: 20px; z-index: 1"
+          >
+            <h1 style="font-size: 4vw; line-height: 1.2; margin: 0">
+              UNLOCK CREATIVITY,<br />
+              MASTER FILMMAKING,<br />
+              <span style="color: orange">MASTERCLASS</span> AWAITS.
+            </h1>
+
+            <a
+              href="https://londonlightingmasterclass.co.uk/"
+              target="_blank"
+              style="
+                display: inline-block;
+                margin-top: 20px;
+                padding: 1vw 2vw; /* Relative padding */
+                background-color: #000000;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: 5px;
+                font-size: 1.5vw; /* Relative font size */
+                transition: background-color 0.3s;
+              "
+              onmouseover="this.style.backgroundColor='#FFA500';"
+              onmouseout="this.style.backgroundColor='#000000';"
+            >
+              Enquire
+            </a>
+          </div>
+        </section>
+
+        <!-- Media Queries -->
+        <style>
+          /* Media query for mobile screens */
+          @media (max-width: 768px) {
+            #masterclass h1 {
+              font-size: 6vw; /* Larger font size on mobile */
+            }
+
+            #masterclass a {
+              font-size: 4vw; /* Adjust button text size on mobile */
+              padding: 2vw 3vw; /* Adjust button padding for mobile */
+            }
+
+            #masterclass p {
+              font-size: 3vw; /* Adjust paragraph text size on mobile */
+            }
+
+            #masterclass {
+              flex-direction: column; /* Stack elements vertically on mobile */
+            }
+          }
+        </style>
+      </div>
     </div>
   </body>
 

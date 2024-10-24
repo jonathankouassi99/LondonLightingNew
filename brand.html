@@ -472,16 +472,17 @@
           </div>
         </section>
 
+        <!-- First Section -->
         <section
           style="
             background-color: #000000; /* Dark black background */
             color: #ffffff;
-            font-family: Arial, sans-serif; /* Standard sans-serif font */
+            font-family: Arial, sans-serif;
             display: flex;
             flex-wrap: wrap; /* Allow content to wrap on smaller screens */
             justify-content: space-between; /* Align items to the left and right */
             align-items: center;
-            padding: 50px 5%; /* Adjust padding for different screen sizes */
+            padding: 50px 5%; /* Same padding for both sections */
             margin: 0;
             box-sizing: border-box; /* Include padding and border in element's total width */
           "
@@ -492,15 +493,20 @@
               flex: 1;
               min-width: 300px;
               text-align: left;
-              padding-right: 20px;
               margin-bottom: 20px;
+              padding-right: 20px;
             "
+            class="why-us"
           >
             <h2
               style="
                 font-size: 2.2rem; /* Responsive font size */
                 margin-bottom: 20px;
-                font-family: Arial, sans-serif;
+                padding-left: clamp(
+                  10px,
+                  5vw,
+                  50px
+                ); /* Responsive left padding */
               "
             >
               Why Us?
@@ -511,9 +517,9 @@
           <div
             class="testimonial-container"
             style="
-              text-align: left;
+              flex: 1;
               max-width: 600px;
-              width: 100%; /* Make it responsive */
+              text-align: left;
               padding: 20px;
               background-color: #1a1a1a; /* Slightly lighter background */
               border-radius: 10px;
@@ -533,6 +539,15 @@
             </p>
           </div>
         </section>
+
+        <!-- Media Queries for Mobile Responsiveness -->
+        <style>
+          @media (max-width: 768px) {
+            .why-us h2 {
+              padding-left: 0; /* Remove left padding on mobile */
+            }
+          }
+        </style>
 
         <section
           style="
@@ -905,7 +920,7 @@
           }
 
           .header {
-            font-size: 4vw; /* Use viewport width for responsive font size */
+            font-size: 3vw; /* Reduce font size for larger screens */
             font-weight: bold;
             margin-bottom: 20px;
           }
@@ -916,13 +931,13 @@
             gap: 20px;
             overflow: hidden;
             scroll-behavior: smooth;
-            flex-wrap: wrap; /* Ensure the content wraps on smaller screens */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
           }
 
           /* Individual Collection Styling */
           .collection {
             position: relative;
-            width: 100%;
+            flex: 1 1 calc(50% - 20px); /* Each collection takes 50% of the width minus gap */
             transition: transform 0.3s ease-in-out;
             text-decoration: none;
             color: white;
@@ -945,14 +960,14 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 3vw; /* Responsive text using viewport width */
+            font-size: 2vw; /* Responsive text using viewport width */
             font-weight: bold;
             text-align: center;
           }
 
           .collection-description {
             margin-top: 10px;
-            font-size: 1.5vw; /* Responsive text size */
+            font-size: 1.2vw; /* Responsive text size */
             color: #b3b3b3;
             text-align: center;
           }
@@ -981,7 +996,11 @@
           /* Media Queries for Mobile Responsiveness */
           @media (max-width: 768px) {
             .header {
-              font-size: 6vw; /* Increase header font size for mobile */
+              font-size: 6vw; /* Larger header font size for mobile */
+            }
+
+            .collection {
+              flex: 1 1 100%; /* Full width for collections on mobile */
             }
 
             .collection-title {
@@ -994,10 +1013,6 @@
 
             .navigation i {
               font-size: 5vw; /* Adjust icon size for mobile */
-            }
-
-            .collections {
-              flex-direction: column; /* Stack the collections vertically on mobile */
             }
           }
         </style>

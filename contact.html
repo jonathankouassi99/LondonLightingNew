@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>London Lighting - Contact Us</title>
+    <link rel="icon" href="" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#212322" />
+    <meta
+      name="description"
+      content="Contact London Lighting for all your lighting production needs."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer="defer"></script>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        height: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+      }
+
+      section {
+        padding: 50px 20px;
+      }
+
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
+
+      footer {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      form {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      input,
+      textarea,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1rem;
+      }
+
+      button {
+        background-color: orange;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: darkorange;
+      }
+
+      .menu-options {
+        display: flex;
+        justify-content: space-around;
+        gap: 15px;
+        color: white;
+      }
+
+      .menu-li {
+        text-decoration: none;
+        color: white;
+      }
+
+      .menu-overlay,
+      .menu-cont {
+        background-color: black;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        section {
+          padding: 20px;
+        }
+
+        h1,
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        button {
+          padding: 10px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu-cont">
+      <div class="relav">
+        <div class="logo-cont">
+          <a href="/" style="text-decoration: none">
+            <span style="font-size: 17px; font-weight: bold; color: white"
+              >LONDON LIGHTING</span
+            >
+          </a>
+        </div>
+        <div class="menu-options">
+          <div class="cent">
+            <div class="menu-li">
+              <p class="first principal">Services</p>
+              <div class="sub-options">
+                <a href="/brand.html"><p>BRANDING</p></a>
+                <a href="/events.html"><p>EVENTS</p></a>
+                <a href="/lighting.html"><p>LIGHTING SERVICES</p></a>
+                <a href="/music.html"><p>MUSIC VIDEOS</p></a>
+                <a href="/music.html"><p>FILM</p></a>
+              </div>
+            </div>
+            <a class="menu-li" href="/about.html">
+              <p class="principal">About Us</p>
+            </a>
+            <a
+              class="menu-li"
+              href="https://londonlightingmasterclass.co.uk/"
+              target="_blank"
+            >
+              <p class="principal">MASTERCLASS</p>
+            </a>
+            <a
+              class="menu-li"
+              href="https://www.instagram.com/cosmos_studios1/?hl=en-gb"
+              target="_blank"
+            >
+              <p class="principal">COSMOS STUDIOS</p>
+            </a>
+            <a
+              class="menu-li"
+              href="https://www.instagram.com/londonlighting10/"
+              target="_blank"
+            >
+              <p class="principal">instagram</p></a
+            >
+            <a class="menu-li" href="/contact.html">
+              <p class="principal">Contact Us</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-scroll-container="">
+      <!-- Contact Us Section -->
+      <section
+        style="
+          background-color: black;
+          color: white;
+          text-align: center;
+          padding: 50px 20px;
+          margin-top: 50px;
+        "
+      >
+        <h1 style="font-size: 3rem; margin-bottom: 20px">Contact Us</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 20px">
+          We're here to assist with all your lighting production needs.
+        </p>
+      </section>
+
+      <!-- Contact Information Section -->
+      <section
+        style="
+          background-color: #121212;
+          color: white;
+          text-align: center;
+          padding: 50px 20px;
+        "
+      >
+        <h2 style="font-size: 2rem; margin-bottom: 20px">
+          Our Contact Information
+        </h2>
+        <p style="font-size: 1.1rem; margin-bottom: 20px">
+          Email:
+          <a
+            href="mailto:Jordanyoung@londonlighting10.com"
+            style="color: orange"
+            >Jordanyoung@londonlighting10.com</a
+          ><br />
+          Phone: +44 020 3883 5878<br />
+          Address: Felixstowe Rd, Abbey Wood, London SE2 9SG<br />
+          Instagram:
+          <a
+            href="https://www.instagram.com/londonlighting10/"
+            target="_blank"
+            style="color: orange"
+            >@londonlighting10</a
+          >
+        </p>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section
+        style="background-color: black; color: white; padding: 50px 20px"
+      >
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px">
+          Get in Touch
+        </h2>
+        <form
+          onsubmit="sendMail(); return false;"
+          style="max-width: 600px; margin: 0 auto; text-align: left"
+        >
+          <label
+            for="name"
+            style="font-size: 1.1rem; margin-bottom: 10px; display: block"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            style="
+              width: 100%;
+              padding: 10px;
+              margin-bottom: 15px;
+              border-radius: 5px;
+              border: none;
+              font-size: 1rem;
+            "
+          />
+
+          <label
+            for="email"
+            style="font-size: 1.1rem; margin-bottom: 10px; display: block"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            style="
+              width: 100%;
+              padding: 10px;
+              margin-bottom: 15px;
+              border-radius: 5px;
+              border: none;
+              font-size: 1rem;
+            "
+          />
+
+          <label
+            for="message"
+            style="font-size: 1.1rem; margin-bottom: 10px; display: block"
+            >Message</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            required
+            style="
+              width: 100%;
+              padding: 10px;
+              margin-bottom: 15px;
+              border-radius: 5px;
+              border: none;
+              font-size: 1rem;
+            "
+          ></textarea>
+
+          <button
+            type="submit"
+            style="
+              width: 100%;
+              padding: 10px;
+              background-color: orange;
+              color: white;
+              font-size: 1rem;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            Send Message
+          </button>
+        </form>
+      </section>
+
+      <!-- Footer Section -->
+      <footer
+        style="
+          background-color: black;
+          color: white;
+          text-align: center;
+          padding: 20px;
+        "
+      >
+        <p style="font-size: 1rem">
+          &copy; 2024 London Lighting. All rights reserved.
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      function sendMail() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        var mailtoLink = `mailto:Jordanyoung@londonlighting10.com?subject=Message%20from%20${encodeURIComponent(
+          name
+        )}&body=Name:%20${encodeURIComponent(
+          name
+        )}%0AEmail:%20${encodeURIComponent(
+          email
+        )}%0A%0AMessage:%20${encodeURIComponent(message)}`;
+
+        window.location.href = mailtoLink;
+      }
+    </script>
+  </body>
+</html>

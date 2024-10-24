@@ -200,8 +200,12 @@
         style="
           position: relative;
           width: 100%;
-          height: 100vh;
+          height: 50vh;
           background-color: #1a1a1a;
+          display: flex;
+          align-items: center; /* Center content vertically */
+          justify-content: center; /* Center content horizontally */
+          box-sizing: border-box; /* Ensures padding is included in width calculations */
         "
       >
         <video
@@ -233,29 +237,44 @@
             color: white;
             text-align: left;
             padding: 20px;
-            max-width: 600px;
-            padding-left: 50px;
-            margin-top: 50px;
+            max-width: 80%; /* Responsive width */
+            margin: 0 auto; /* Center horizontally */
+            box-sizing: border-box;
           "
         >
           <div style="flex: 1; min-width: 300px; margin-right: 20px">
-            <h1 style="font-size: 50px; line-height: 1.2; margin: 0">
-              <span style="color: orange">MUSIC VIDEOS & FILM PRODUCTION</span>
-              CRAFTING MASTERPIECES.
+            <h1 style="line-height: 1.2; margin: 0" class="responsive-heading">
+              <span style="color: orange">ELEVATING FILM</span> CRAFTING VISUAL
+              MASTERPIECES.
             </h1>
           </div>
+
+          <style>
+            /* Default font size for larger screens */
+            .responsive-heading {
+              font-size: 4vw;
+            }
+
+            /* Media query for mobile screens */
+            @media (max-width: 768px) {
+              .responsive-heading {
+                font-size: 30vw;
+              }
+            }
+          </style>
+
           <a
-            href="https://wa.me/447519076844"
+            href="https://wa.me/447407603907"
             style="
               display: inline-block;
               margin-top: 20px;
-              padding: 15px 30px; /* Increase the button size */
+              padding: 1vw 2vw; /* Adjust padding using viewport width */
               background-color: #000000;
               color: rgb(255, 255, 255);
               text-decoration: none;
               font-weight: bold;
               border-radius: 5px;
-              font-size: 20px; /* Increase the font size */
+              font-size: 1.5vw; /* Use viewport width for font size */
               transition: background-color 0.3s ease;
             "
             onmouseover="this.style.backgroundColor='#FFA500'"
@@ -268,184 +287,198 @@
 
       <section>
         <div
-          class="video-grid"
+          class="image-grid"
           style="
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 0;
-            width: 100vw;
-            padding-bottom: 0px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0px;
+            width: 100%;
+            box-sizing: border-box;
           "
         >
+          <!-- First Image with Play Button -->
           <div
-            class="video-item"
-            style="position: relative; width: 100%; height: 100%"
+            class="image-item"
+            style="position: relative; width: 100%; height: auto"
           >
-            <video
-              class="video"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                cursor: pointer;
-              "
-              src="media/style.mp4"
-              type="video/mp4"
-              onclick="togglePlay(this)"
-            ></video>
-            <div
-              class="play-button"
-              onclick="togglePlay(this)"
-              style="
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: rgba(0, 0, 0, 0.5);
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-              "
-            >
-              <span style="color: white; font-size: 30px">&#9658;</span>
-            </div>
+            <a href="https://youtu.be/BFUSV4j0yGc" target="_blank">
+              <img
+                class="image"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  cursor: pointer;
+                "
+                src="images/ktrap.png"
+                alt="Style Image"
+              />
+              <div
+                class="play-button"
+                style="
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background-color: rgba(0, 0, 0, 0.5);
+                  border-radius: 50%;
+                  width: 60px;
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  cursor: pointer;
+                "
+              >
+                <span style="color: white; font-size: 30px">&#9658;</span>
+              </div>
+            </a>
           </div>
+
+          <!-- Second Image with Play Button -->
           <div
-            class="video-item"
-            style="position: relative; width: 100%; height: 100%"
+            class="image-item"
+            style="position: relative; width: 100%; height: auto"
           >
-            <video
-              class="video"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                cursor: pointer;
-              "
-              src="media/nem.mp4"
-              type="video/mp4"
-              onclick="togglePlay(this)"
-            ></video>
-            <div
-              class="play-button"
-              onclick="togglePlay(this)"
-              style="
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: rgba(0, 0, 0, 0.5);
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-              "
+            <a
+              href="https://www.youtube.com/watch?v=pDddlvCfTiw&ab_channel=CentralCee"
+              target="_blank"
             >
-              <span style="color: white; font-size: 30px">&#9658;</span>
-            </div>
+              <img
+                class="image"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  cursor: pointer;
+                "
+                src="images/LBCC.jpg"
+                alt="Nem Image"
+              />
+              <div
+                class="play-button"
+                style="
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background-color: rgba(0, 0, 0, 0.5);
+                  border-radius: 50%;
+                  width: 60px;
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  cursor: pointer;
+                "
+              >
+                <span style="color: white; font-size: 30px">&#9658;</span>
+              </div>
+            </a>
           </div>
+
+          <!-- Third Image with Play Button -->
           <div
-            class="video-item"
-            style="position: relative; width: 100%; height: 100%"
+            class="image-item"
+            style="position: relative; width: 100%; height: auto"
           >
-            <video
-              class="video"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                cursor: pointer;
-              "
-              src="media/m24.mp4"
-              type="video/mp4"
-              onclick="togglePlay(this)"
-            ></video>
-            <div
-              class="play-button"
-              onclick="togglePlay(this)"
-              style="
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: rgba(0, 0, 0, 0.5);
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-              "
+            <a
+              href="https://www.youtube.com/watch?v=YrzBrVCMxaU&ab_channel=TionWayne"
+              target="_blank"
             >
-              <span style="color: white; font-size: 30px">&#9658;</span>
-            </div>
+              <img
+                class="image"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  cursor: pointer;
+                "
+                src="images/RM.png"
+                alt="M24 Image"
+              />
+              <div
+                class="play-button"
+                style="
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background-color: rgba(0, 0, 0, 0.5);
+                  border-radius: 50%;
+                  width: 60px;
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  cursor: pointer;
+                "
+              >
+                <span style="color: white; font-size: 30px">&#9658;</span>
+              </div>
+            </a>
           </div>
+
+          <!-- Fourth Image with Play Button -->
           <div
-            class="video-item"
-            style="position: relative; width: 100%; height: 100%"
+            class="image-item"
+            style="position: relative; width: 100%; height: auto"
           >
-            <video
-              class="video"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                cursor: pointer;
-              "
-              src="media/tion.mp4"
-              type="video/mp4"
-              onclick="togglePlay(this)"
-            ></video>
-            <div
-              class="play-button"
-              onclick="togglePlay(this)"
-              style="
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: rgba(0, 0, 0, 0.5);
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-              "
-            >
-              <span style="color: white; font-size: 30px">&#9658;</span>
-            </div>
+            <a href="https://youtu.be/DgV_oBb_ADw" target="_blank">
+              <img
+                class="image"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  cursor: pointer;
+                "
+                src="images/nemz.png"
+                alt="Tion Image"
+              />
+              <div
+                class="play-button"
+                style="
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background-color: rgba(0, 0, 0, 0.5);
+                  border-radius: 50%;
+                  width: 60px;
+                  height: 60px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  cursor: pointer;
+                "
+              >
+                <span style="color: white; font-size: 30px">&#9658;</span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
 
-      <script>
-        function togglePlay(element) {
-          const video =
-            element.tagName === "VIDEO"
-              ? element
-              : element.previousElementSibling;
-          const button = video.nextElementSibling;
+      <!-- CSS Styles for Responsiveness -->
+      <style>
+        /* Media query for mobile screens */
+        @media (max-width: 768px) {
+          #musicvideos h1 {
+            font-size: 6vw; /* Use viewport width to scale title text */
+          }
 
-          if (video.paused) {
-            video.play();
-            button.style.display = "none";
-          } else {
-            video.pause();
-            button.style.display = "flex";
+          #musicvideos a {
+            font-size: 3.5vw; /* Adjust button text size for mobile */
+            padding: 3vw 4vw; /* Adjust button padding for mobile */
+          }
+
+          .image-grid {
+            grid-template-columns: 1fr; /* Stack images on smaller screens */
           }
         }
-      </script>
+      </style>
+
       <div data-controller="index">
         <section
           style="
@@ -459,15 +492,15 @@
           "
         >
           <div style="text-align: center">
-            <h1 style="font-size: 4em; margin: 0" id="count1">0</h1>
+            <h1 style="font-size: 4em; margin: 0" id="count1">2000</h1>
             <p style="font-size: 1.2em; margin: 0">Projects Completed</p>
           </div>
           <div style="text-align: center">
-            <h1 style="font-size: 4em; margin: 0" id="count2">0</h1>
+            <h1 style="font-size: 4em; margin: 0" id="count2">5</h1>
             <p style="font-size: 1.2em; margin: 0">Years Experince</p>
           </div>
           <div style="text-align: center">
-            <h1 style="font-size: 4em; margin: 0" id="count3">0</h1>
+            <h1 style="font-size: 4em; margin: 0" id="count3">10</h1>
             <p style="font-size: 1.2em; margin: 0">
               Industry Awards Won <span style="font-size: 1.2em"></span>
             </p>
@@ -533,16 +566,17 @@
           </div>
         </section>
 
+        <!-- First Section -->
         <section
           style="
             background-color: #000000; /* Dark black background */
             color: #ffffff;
-            font-family: Arial, sans-serif; /* Standard sans-serif font */
+            font-family: Arial, sans-serif;
             display: flex;
             flex-wrap: wrap; /* Allow content to wrap on smaller screens */
             justify-content: space-between; /* Align items to the left and right */
             align-items: center;
-            padding: 50px 5%; /* Adjust padding for different screen sizes */
+            padding: 50px 5%; /* Same padding for both sections */
             margin: 0;
             box-sizing: border-box; /* Include padding and border in element's total width */
           "
@@ -553,15 +587,20 @@
               flex: 1;
               min-width: 300px;
               text-align: left;
-              padding-right: 20px;
               margin-bottom: 20px;
+              padding-right: 20px;
             "
+            class="why-us"
           >
             <h2
               style="
                 font-size: 2.2rem; /* Responsive font size */
                 margin-bottom: 20px;
-                font-family: Arial, sans-serif;
+                padding-left: clamp(
+                  10px,
+                  5vw,
+                  50px
+                ); /* Responsive left padding */
               "
             >
               Why Us?
@@ -572,9 +611,9 @@
           <div
             class="testimonial-container"
             style="
-              text-align: left;
+              flex: 1;
               max-width: 600px;
-              width: 100%; /* Make it responsive */
+              text-align: left;
               padding: 20px;
               background-color: #1a1a1a; /* Slightly lighter background */
               border-radius: 10px;
@@ -594,6 +633,15 @@
             </p>
           </div>
         </section>
+
+        <!-- Media Queries for Mobile Responsiveness -->
+        <style>
+          @media (max-width: 768px) {
+            .why-us h2 {
+              padding-left: 0; /* Remove left padding on mobile */
+            }
+          }
+        </style>
 
         <section
           style="
@@ -659,8 +707,8 @@
               >
                 <p style="margin: 0; line-height: 1.6; color: #ccc">
                   We specialise in crafting dynamic lighting setups that enhance
-                  the visual narrative of your film or music video. From concept
-                  to execution, our lighting design brings mood, depth, and
+                  the visual narrative of your film or event. From concept to
+                  execution, our lighting design brings mood, depth, and
                   dimension to every scene, creating unforgettable visual
                   experiences.
                 </p>
@@ -894,56 +942,7 @@
                 gap: 10px;
                 margin-bottom: 20px;
               "
-            >
-              <div style="position: relative">
-                <video
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  style="
-                    border-radius: 10px;
-                    width: 300px;
-                    height: 200px;
-                    object-fit: cover;
-                  "
-                >
-                  <source src="media/Google.mp4" type="video/mp4" />
-                </video>
-              </div>
-              <div style="position: relative">
-                <video
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  style="
-                    border-radius: 10px;
-                    width: 300px;
-                    height: 200px;
-                    object-fit: cover;
-                  "
-                >
-                  <source src="media/Google.mp4" type="video/mp4" />
-                </video>
-              </div>
-              <div style="position: relative">
-                <video
-                  autoplay
-                  loop
-                  muted
-                  playsinline
-                  style="
-                    border-radius: 10px;
-                    width: 300px;
-                    height: 200px;
-                    object-fit: cover;
-                  "
-                >
-                  <source src="media/Google.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
+            ></div>
             <div style="max-width: 600px; margin: auto">
               <h1 id="cosmosstudios" style="font-size: 2.5em; margin: 0">
                 Transform your ideas in our
@@ -969,13 +968,7 @@
                   alt="A person in a red outfit posing outdoors"
                   src="https://replicate.delivery/yhqm/t7CxxjXOC2rFMdOHQFat62QjfEZ7hDuCX6U58nPelWPAX0QTA/out-0.png"
                   style="object-position: 50% 35%"
-                  Adjust
-                  the
-                  image
-                  position
-                  --
                 />
-
                 <div class="collection-title">Content Marketing</div>
                 <div class="collection-description">
                   Engage audiences with valuable content to build brand trust.
@@ -986,13 +979,7 @@
                   alt="A person in a red outfit sitting indoors"
                   src="https://replicate.delivery/yhqm/bF5igj6iaF5JLNYcupSV6T8rbO9zx7KwN1iqXdyWL2DwFN0E/out-0.png"
                   style="object-position: 50% 50%"
-                  Adjust
-                  the
-                  image
-                  position
-                  --
                 />
-
                 <div class="collection-title">Campaigning</div>
                 <div class="collection-description">
                   Execute targeted campaigns to effectively promote and drive
@@ -1008,6 +995,7 @@
           </div>
         </section>
 
+        <!-- CSS Styling -->
         <style>
           body {
             margin: 0;
@@ -1015,55 +1003,70 @@
             background-color: #121212;
             color: #ffffff;
           }
+
+          /* Featured Collection Section */
           .featured-collections {
-            padding: 50px 20px;
+            padding: 5vw 3vw; /* Adjust padding using viewport width */
           }
+
           .container {
             position: relative;
           }
+
           .header {
-            font-size: 48px;
+            font-size: 3vw; /* Reduce font size for larger screens */
             font-weight: bold;
             margin-bottom: 20px;
           }
+
+          /* Collections Flexbox Layout */
           .collections {
             display: flex;
             gap: 20px;
             overflow: hidden;
             scroll-behavior: smooth;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
           }
+
+          /* Individual Collection Styling */
           .collection {
             position: relative;
-            min-width: 50%;
+            flex: 1 1 calc(50% - 20px); /* Each collection takes 50% of the width minus gap */
             transition: transform 0.3s ease-in-out;
             text-decoration: none;
             color: white;
           }
+
           .collection img {
             width: 100%;
-            height: 336px;
+            height: auto;
             object-fit: cover;
             display: block;
             transition: filter 0.3s ease-in-out;
           }
+
           .collection:hover img {
             filter: brightness(70%);
           }
+
           .collection-title {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 36px;
+            font-size: 2vw; /* Responsive text using viewport width */
             font-weight: bold;
             text-align: center;
           }
+
           .collection-description {
             margin-top: 10px;
-            font-size: 16px;
+            font-size: 1.2vw; /* Responsive text size */
             color: #b3b3b3;
             text-align: center;
           }
+
+          /* Navigation Arrows */
           .navigation {
             position: absolute;
             top: 50%;
@@ -1073,26 +1076,51 @@
             transform: translateY(-50%);
             pointer-events: none;
           }
+
           .navigation i {
-            font-size: 24px;
+            font-size: 2vw; /* Responsive icon size */
             cursor: pointer;
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
+            padding: 1vw; /* Responsive padding */
             border-radius: 50%;
             pointer-events: all;
             color: white;
           }
+
+          /* Media Queries for Mobile Responsiveness */
+          @media (max-width: 768px) {
+            .header {
+              font-size: 6vw; /* Larger header font size for mobile */
+            }
+
+            .collection {
+              flex: 1 1 100%; /* Full width for collections on mobile */
+            }
+
+            .collection-title {
+              font-size: 5vw; /* Adjust collection title size */
+            }
+
+            .collection-description {
+              font-size: 3vw; /* Adjust description size */
+            }
+
+            .navigation i {
+              font-size: 5vw; /* Adjust icon size for mobile */
+            }
+          }
         </style>
+
         <section
           id="masterclass"
           style="
             color: white;
-            padding: 50px 50px 150px 50px;
+            padding: 5vw; /* Relative padding */
             font-family: Arial, sans-serif;
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
             justify-content: space-between;
-            align-items: stretch;
+            align-items: center;
             position: relative;
             overflow: hidden;
           "
@@ -1112,8 +1140,10 @@
             "
           ></div>
 
-          <div style="flex: 1; min-width: 300px; margin-right: 20px">
-            <h1 style="font-size: 50px; line-height: 1.2; margin: 0">
+          <div
+            style="flex: 1; min-width: 300px; margin-right: 20px; z-index: 1"
+          >
+            <h1 style="font-size: 4vw; line-height: 1.2; margin: 0">
               UNLOCK CREATIVITY,<br />
               MASTER FILMMAKING,<br />
               <span style="color: orange">MASTERCLASS</span> AWAITS.
@@ -1125,12 +1155,13 @@
               style="
                 display: inline-block;
                 margin-top: 20px;
-                padding: 10px 20px;
+                padding: 1vw 2vw; /* Relative padding */
                 background-color: #000000;
                 color: rgb(255, 255, 255);
                 text-decoration: none;
                 font-weight: bold;
                 border-radius: 5px;
+                font-size: 1.5vw; /* Relative font size */
                 transition: background-color 0.3s;
               "
               onmouseover="this.style.backgroundColor='#FFA500';"
@@ -1139,28 +1170,30 @@
               Enquire
             </a>
           </div>
-
-          <div
-            style="
-              flex: 1;
-              min-width: 300px;
-              display: flex;
-              align-items: center;
-              height: auto;
-            "
-          >
-            <p
-              style="
-                font-size: 16px;
-                line-height: 1.5;
-                margin-top: 0;
-                height: 100%;
-                display: flex;
-                align-items: center;
-              "
-            ></p>
-          </div>
         </section>
+
+        <!-- Media Queries -->
+        <style>
+          /* Media query for mobile screens */
+          @media (max-width: 768px) {
+            #masterclass h1 {
+              font-size: 6vw; /* Larger font size on mobile */
+            }
+
+            #masterclass a {
+              font-size: 4vw; /* Adjust button text size on mobile */
+              padding: 2vw 3vw; /* Adjust button padding for mobile */
+            }
+
+            #masterclass p {
+              font-size: 3vw; /* Adjust paragraph text size on mobile */
+            }
+
+            #masterclass {
+              flex-direction: column; /* Stack elements vertically on mobile */
+            }
+          }
+        </style>
       </div>
     </div>
   </body>

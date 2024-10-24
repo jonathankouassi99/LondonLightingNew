@@ -633,63 +633,78 @@
             align-items: stretch;
             position: relative;
             overflow: hidden;
+            width: 100%;
+            box-sizing: border-box; /* Ensure padding is included in the width */
           "
         >
-          <!-- Background Video -->
-          <video
-            autoplay
-            loop
-            muted
-            playsinline
+          <!-- Background Video Container -->
+          <div
             style="
               position: absolute;
               top: 0;
               left: 0;
               width: 100%;
               height: 100%;
-              object-fit: cover;
               z-index: -1;
+              overflow: hidden;
             "
-            onloadedmetadata="this.currentTime = 0"
-            ontimeupdate="if(this.currentTime > 2){this.currentTime = 0; this.play();}"
           >
-            <source src="media/cano.mp4" type="video/mp4" />
-            <!-- Fallback image for older browsers -->
-            <img
-              src="path_to_your_fallback_image.jpg"
-              alt="Fallback Image"
-              style="width: 100%; height: 100%; object-fit: cover"
-            />
-          </video>
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              "
+              onloadedmetadata="this.currentTime = 0"
+              ontimeupdate="if(this.currentTime > 2){this.currentTime = 0; this.play();}"
+            >
+              <source src="media/cano.mp4" type="video/mp4" />
+              <!-- Fallback image for older browsers -->
+              <img
+                src="path_to_your_fallback_image.jpg"
+                alt="Fallback Image"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </video>
+          </div>
 
-          <div style="flex: 1; min-width: 300px; margin-right: 20px">
-            <h1 style="font-size: 50px; line-height: 1.2; margin: 0">
+          <!-- Left Content -->
+          <div style="flex: 1; min-width: 300px; margin-right: 2vw; padding: 0">
+            <h1 style="font-size: 5vw; line-height: 1.2; margin: 0">
               ELEVATING <span style="color: orange">BRANDS</span>,<br />
               CRAFTING VISUAL<br />
               MASTERPIECES.
-              <span style="text-decoration: line-through"></span>
             </h1>
 
             <a
-              href="https://wa.me/447852322560"
+              href="https://wa.me/447519076844"
               style="
                 display: inline-block;
                 margin-top: 20px;
-                padding: 10px 20px;
+                padding: 15px 30px;
                 background-color: #000000;
                 color: rgb(255, 255, 255);
                 text-decoration: none;
                 font-weight: bold;
                 border-radius: 5px;
-                transition: background-color 0.3s;
+                font-size: 20px;
+                transition: background-color 0.3s ease;
               "
-              onmouseover="this.style.backgroundColor='#FFA500';"
-              onmouseout="this.style.backgroundColor='#000000';"
+              onmouseover="this.style.backgroundColor='#FFA500'"
+              onmouseout="this.style.backgroundColor='#000000'"
             >
               Book Now
             </a>
           </div>
 
+          <!-- Right Content -->
           <div
             style="
               flex: 1;
@@ -711,179 +726,174 @@
             ></p>
           </div>
         </section>
-
         <section>
           <div
-            class="video-grid"
+            class="image-grid"
             style="
               display: grid;
-              grid-template-columns: 1fr 1fr;
-              grid-template-rows: 1fr 1fr;
-              gap: 0;
-              width: 100vw;
-              padding-bottom: 0px;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 0px;
+              width: 100%;
+              box-sizing: border-box;
             "
           >
+            <!-- First Image with Play Button -->
             <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
+              class="image-item"
+              style="position: relative; width: 100%; height: auto"
             >
-              <video
-                id="video-thumbnail"
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                  background-color: black;
-                "
-                src="media/google.mp4"
-                type="video/mp4"
-                poster="images/googlethumbnail.png"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(document.getElementById('video-thumbnail'))"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
-              >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
-            </div>
-            <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
-            >
-              <video
-                id="video-thumbnail"
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                  background-color: black;
-                "
-                src="media/cano.mp4"
-                type="video/mp4"
-                poster="images/cano1.png"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(document.getElementById('video-thumbnail'))"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
-              >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
+              <a href="https://youtu.be/Xxvki1SZAO8" target="_blank">
+                <img
+                  class="image"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                  "
+                  src="images/dysonarsenal.png"
+                  alt="Style Image"
+                />
+                <div
+                  class="play-button"
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                  "
+                >
+                  <span style="color: white; font-size: 30px">&#9658;</span>
+                </div>
+              </a>
             </div>
 
+            <!-- Second Image with Play Button -->
             <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
+              class="image-item"
+              style="position: relative; width: 100%; height: auto"
             >
-              <video
-                id="video-thumbnail"
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                  background-color: black;
-                "
-                src="images/nikespotify.mp4"
-                type="video/mp4"
-                poster="images/nikespotify.png"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(document.getElementById('video-thumbnail'))"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
+              <a
+                href="https://www.youtube.com/watch?v=WxdUGXMl9ns&ab_channel=CanoWater"
+                target="_blank"
               >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
+                <img
+                  class="image"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                  "
+                  src="images/cano1.png"
+                  alt="Nem Image"
+                />
+                <div
+                  class="play-button"
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                  "
+                >
+                  <span style="color: white; font-size: 30px">&#9658;</span>
+                </div>
+              </a>
             </div>
+
+            <!-- Third Image with Play Button -->
             <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
+              class="image-item"
+              style="position: relative; width: 100%; height: auto"
             >
-              <video
-                id="video-thumbnail"
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                  background-color: black;
-                "
-                src="media/dysonarsenal.mp4"
-                type="video/mp4"
-                poster="images/dysonarsenal.png"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(document.getElementById('video-thumbnail'))"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
-              >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
+              <a href="https://youtu.be/luEspfvFad4" target="_blank">
+                <img
+                  class="image"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                  "
+                  src="images/nikespotify.png"
+                  alt="M24 Image"
+                />
+                <div
+                  class="play-button"
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                  "
+                >
+                  <span style="color: white; font-size: 30px">&#9658;</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Fourth Image with Play Button -->
+            <div
+              class="image-item"
+              style="position: relative; width: 100%; height: auto"
+            >
+              <a href="https://youtu.be/TXMpe38W-ac" target="_blank">
+                <img
+                  class="image"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                  "
+                  src="images/googlethumbnail.png"
+                  alt="Tion Image"
+                />
+                <div
+                  class="play-button"
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                  "
+                >
+                  <span style="color: white; font-size: 30px">&#9658;</span>
+                </div>
+              </a>
             </div>
           </div>
         </section>
@@ -917,15 +927,15 @@
           "
         >
           <div style="text-align: center">
-            <h1 style="font-size: 4em; margin: 0" id="count1">0</h1>
+            <h1 style="font-size: 4em; margin: 0" id="count1">2000</h1>
             <p style="font-size: 1.2em; margin: 0">Projects Completed</p>
           </div>
           <div style="text-align: center">
-            <h1 style="font-size: 4em; margin: 0" id="count2">0</h1>
+            <h1 style="font-size: 4em; margin: 0" id="count2">5</h1>
             <p style="font-size: 1.2em; margin: 0">Years Experince</p>
           </div>
           <div style="text-align: center">
-            <h1 style="font-size: 4em; margin: 0" id="count3">0</h1>
+            <h1 style="font-size: 4em; margin: 0" id="count3">10</h1>
             <p style="font-size: 1.2em; margin: 0">
               Industry Awards Won <span style="font-size: 1.2em"></span>
             </p>
@@ -1262,40 +1272,30 @@
 
         <section id="lightingservices" class="featured-collections">
           <div class="container">
-            <div class="header">Lighting Services</div>
+            <div class="header">Other Services</div>
             <div class="collections" id="collections">
-              <a href="#" class="collection">
+              <a href="/contact.html" class="collection">
                 <img
                   alt="A person in a red outfit posing outdoors"
                   src="https://replicate.delivery/yhqm/t7CxxjXOC2rFMdOHQFat62QjfEZ7hDuCX6U58nPelWPAX0QTA/out-0.png"
                   style="object-position: 50% 35%"
-                  Adjust
-                  the
-                  image
-                  position
-                  --
                 />
-
                 <div class="collection-title">Gaffer & Spark Hire</div>
                 <div class="collection-description">
-                  Trustworthy and skilled gaffers & sparks available for hire.
+                  Reliable and experienced gaffers and sparks available for your
+                  projects.
                 </div>
               </a>
-              <a href="#" class="collection">
+              <a href="/contact.html" class="collection">
                 <img
                   alt="A person in a red outfit sitting indoors"
                   src="https://replicate.delivery/yhqm/bF5igj6iaF5JLNYcupSV6T8rbO9zx7KwN1iqXdyWL2DwFN0E/out-0.png"
                   style="object-position: 50% 50%"
-                  Adjust
-                  the
-                  image
-                  position
-                  --
                 />
-
                 <div class="collection-title">Custom Lighting Packages</div>
                 <div class="collection-description">
-                  Custom packages with operators and kit for creative projects.
+                  Tailored lighting packages with operators and equipment for
+                  creative projects.
                 </div>
               </a>
             </div>
@@ -1307,6 +1307,7 @@
           </div>
         </section>
 
+        <!-- CSS Styling -->
         <style>
           body {
             margin: 0;
@@ -1314,55 +1315,70 @@
             background-color: #121212;
             color: #ffffff;
           }
+
+          /* Featured Collection Section */
           .featured-collections {
-            padding: 50px 20px;
+            padding: 5vw 3vw; /* Adjust padding using viewport width */
           }
+
           .container {
             position: relative;
           }
+
           .header {
-            font-size: 48px;
+            font-size: 3vw; /* Reduce font size for larger screens */
             font-weight: bold;
             margin-bottom: 20px;
           }
+
+          /* Collections Flexbox Layout */
           .collections {
             display: flex;
             gap: 20px;
             overflow: hidden;
             scroll-behavior: smooth;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
           }
+
+          /* Individual Collection Styling */
           .collection {
             position: relative;
-            min-width: 50%;
+            flex: 1 1 calc(50% - 20px); /* Each collection takes 50% of the width minus gap */
             transition: transform 0.3s ease-in-out;
             text-decoration: none;
             color: white;
           }
+
           .collection img {
             width: 100%;
-            height: 336px;
+            height: auto;
             object-fit: cover;
             display: block;
             transition: filter 0.3s ease-in-out;
           }
+
           .collection:hover img {
             filter: brightness(70%);
           }
+
           .collection-title {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 36px;
+            font-size: 2vw; /* Responsive text using viewport width */
             font-weight: bold;
             text-align: center;
           }
+
           .collection-description {
             margin-top: 10px;
-            font-size: 16px;
+            font-size: 1.2vw; /* Responsive text size */
             color: #b3b3b3;
             text-align: center;
           }
+
+          /* Navigation Arrows */
           .navigation {
             position: absolute;
             top: 50%;
@@ -1372,79 +1388,115 @@
             transform: translateY(-50%);
             pointer-events: none;
           }
+
           .navigation i {
-            font-size: 24px;
+            font-size: 2vw; /* Responsive icon size */
             cursor: pointer;
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
+            padding: 1vw; /* Responsive padding */
             border-radius: 50%;
             pointer-events: all;
             color: white;
           }
+
+          /* Media Queries for Mobile Responsiveness */
+          @media (max-width: 768px) {
+            .header {
+              font-size: 6vw; /* Larger header font size for mobile */
+            }
+
+            .collection {
+              flex: 1 1 100%; /* Full width for collections on mobile */
+            }
+
+            .collection-title {
+              font-size: 5vw; /* Adjust collection title size */
+            }
+
+            .collection-description {
+              font-size: 3vw; /* Adjust description size */
+            }
+
+            .navigation i {
+              font-size: 5vw; /* Adjust icon size for mobile */
+            }
+          }
         </style>
 
         <section
-          id="musicvideos"
+          id="adverts"
           style="
+            color: white;
+            padding: 50px 50px 150px 50px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: stretch;
             position: relative;
+            overflow: hidden;
             width: 100%;
-            height: 100vh;
-            background-color: #1a1a1a;
+            box-sizing: border-box; /* Ensure padding is included in the width */
           "
         >
-          <video
-            autoplay
-            loop
-            muted
-            playsinline
+          <!-- Background Video Container -->
+          <div
             style="
               position: absolute;
               top: 0;
               left: 0;
               width: 100%;
               height: 100%;
-              object-fit: cover;
-              z-index: 1;
+              z-index: -1;
+              overflow: hidden;
             "
           >
-            <source src="media/style.mp4" type="video/mp4" />
-            <!-- Fallback image for older browsers -->
-            <img
-              src="https://replicate.delivery/yhqm/JSVeyyp5BIQAbSZ71dNkAqpJgLgoWsUEeY7P5dxEkaeyQlhmA/out-0.png"
-              alt="Fallback Image"
-            />
-          </video>
-          <div
-            style="
-              position: relative;
-              z-index: 2;
-              color: white;
-              text-align: left;
-              padding: 20px;
-              max-width: 600px;
-              padding-left: 50px;
-              margin-top: 50px;
-            "
-          >
-            <div style="flex: 1; min-width: 300px; margin-right: 20px">
-              <h1 style="font-size: 50px; line-height: 1.2; margin: 0">
-                <span style="color: orange">MUSIC VIDEOS</span><br />
-                VISUALIZING CREATIVITY,<br />
-                CRAFTING MASTERPIECES.
-              </h1>
-            </div>
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              "
+              onloadedmetadata="this.currentTime = 0"
+              ontimeupdate="if(this.currentTime > 2){this.currentTime = 0; this.play();}"
+            >
+              <source src="media/style.mp4" type="video/mp4" />
+              <!-- Fallback image for older browsers -->
+              <img
+                src="path_to_your_fallback_image.jpg"
+                alt="Fallback Image"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </video>
+          </div>
+
+          <!-- Left Content -->
+          <div style="flex: 1; min-width: 300px; margin-right: 2vw; padding: 0">
+            <h1 style="font-size: 5vw; line-height: 1.2; margin: 0">
+              <span style="color: orange">MUSIC VIDEOS</span>,<br />
+              CRAFTING VISUAL<br />
+              MASTERPIECES.
+            </h1>
+
             <a
               href="https://wa.me/447519076844"
               style="
                 display: inline-block;
                 margin-top: 20px;
-                padding: 15px 30px; /* Increase the button size */
+                padding: 15px 30px;
                 background-color: #000000;
                 color: rgb(255, 255, 255);
                 text-decoration: none;
                 font-weight: bold;
                 border-radius: 5px;
-                font-size: 20px; /* Increase the font size */
+                font-size: 20px;
                 transition: background-color 0.3s ease;
               "
               onmouseover="this.style.backgroundColor='#FFA500'"
@@ -1453,167 +1505,200 @@
               Book Now
             </a>
           </div>
-        </section>
 
-        <section>
+          <!-- Right Content -->
           <div
-            class="video-grid"
             style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              grid-template-rows: 1fr 1fr;
-              gap: 0;
-              width: 100vw;
-              padding-bottom: 0px;
+              flex: 1;
+              min-width: 300px;
+              display: flex;
+              align-items: center;
+              height: auto;
             "
           >
+            <p
+              style="
+                font-size: 16px;
+                line-height: 1.5;
+                margin-top: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+              "
+            ></p>
+          </div>
+        </section>
+        <section>
+          <div
+            class="image-grid"
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 0px;
+              width: 100%;
+              box-sizing: border-box;
+            "
+          >
+            <!-- First Image with Play Button -->
             <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
+              class="image-item"
+              style="position: relative; width: 100%; height: auto"
             >
-              <video
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                "
-                src="media/style.mp4"
-                type="video/mp4"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(this)"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
-              >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
+              <a href="https://youtu.be/BFUSV4j0yGc" target="_blank">
+                <img
+                  class="image"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                  "
+                  src="images/ktrap.png"
+                  alt="Style Image"
+                />
+                <div
+                  class="play-button"
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                  "
+                >
+                  <span style="color: white; font-size: 30px">&#9658;</span>
+                </div>
+              </a>
             </div>
+
+            <!-- Second Image with Play Button -->
             <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
+              class="image-item"
+              style="position: relative; width: 100%; height: auto"
             >
-              <video
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                "
-                src="media/nem.mp4"
-                type="video/mp4"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(this)"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
+              <a
+                href="https://www.youtube.com/watch?v=pDddlvCfTiw&ab_channel=CentralCee"
+                target="_blank"
               >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
+                <img
+                  class="image"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                  "
+                  src="images/LBCC.jpg"
+                  alt="Nem Image"
+                />
+                <div
+                  class="play-button"
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                  "
+                >
+                  <span style="color: white; font-size: 30px">&#9658;</span>
+                </div>
+              </a>
             </div>
+
+            <!-- Third Image with Play Button -->
             <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
+              class="image-item"
+              style="position: relative; width: 100%; height: auto"
             >
-              <video
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                "
-                src="media/m24.mp4"
-                type="video/mp4"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(this)"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
+              <a
+                href="https://www.youtube.com/watch?v=YrzBrVCMxaU&ab_channel=TionWayne"
+                target="_blank"
               >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
+                <img
+                  class="image"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                  "
+                  src="images/RM.png"
+                  alt="M24 Image"
+                />
+                <div
+                  class="play-button"
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                  "
+                >
+                  <span style="color: white; font-size: 30px">&#9658;</span>
+                </div>
+              </a>
             </div>
+
+            <!-- Fourth Image with Play Button -->
             <div
-              class="video-item"
-              style="position: relative; width: 100%; height: 100%"
+              class="image-item"
+              style="position: relative; width: 100%; height: auto"
             >
-              <video
-                class="video"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  cursor: pointer;
-                "
-                src="media/tion.mp4"
-                type="video/mp4"
-                onclick="togglePlay(this)"
-              ></video>
-              <div
-                class="play-button"
-                onclick="togglePlay(this)"
-                style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: rgba(0, 0, 0, 0.5);
-                  border-radius: 50%;
-                  width: 60px;
-                  height: 60px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  cursor: pointer;
-                "
-              >
-                <span style="color: white; font-size: 30px">&#9658;</span>
-              </div>
+              <a href="https://youtu.be/DgV_oBb_ADw" target="_blank">
+                <img
+                  class="image"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                  "
+                  src="images/nemz.png"
+                  alt="Tion Image"
+                />
+                <div
+                  class="play-button"
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                  "
+                >
+                  <span style="color: white; font-size: 30px">&#9658;</span>
+                </div>
+              </a>
             </div>
           </div>
         </section>
@@ -1636,152 +1721,17 @@
           }
         </script>
       </div>
-      <section
-        style="
-          background-color: black;
-          color: #ffa500;
-          text-align: center;
-          padding: 5vh 2vw; /* Use viewport-based units for padding */
-          font-family: Arial, sans-serif;
-          position: relative; /* Use relative positioning for proper alignment */
-        "
-      >
-        <!-- Placeholder div for additional content -->
-        <div
-          style="
-            font-size: 1.2rem; /* Use rem for font size */
-            font-weight: normal;
-            letter-spacing: normal;
-            position: absolute;
-            top: 10px; /* Adjusted for responsiveness */
-            right: 20px;
-            color: white;
-          "
-        ></div>
-
-        <!-- Main content container -->
-        <div
-          style="
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 3vh 0; /* Use viewport-based units for padding */
-            font-family: Arial, sans-serif;
-          "
-        >
-          <h2
-            style="
-              font-size: 6vw; /* Use vw for font size to adjust with viewport */
-              font-weight: normal;
-              margin-bottom: 4vh; /* Use viewport-based units for margin */
-            "
-          >
-            ABOUT US
-          </h2>
-        </div>
-
-        <!-- Title text with responsive font size -->
-        <div
-          style="
-            font-size: 12vw; /* Use vw for font size for responsiveness */
-            font-weight: bold;
-            letter-spacing: -0.2vw; /* Adjust letter spacing */
-            line-height: 1.1; /* Improve line height for better readability */
-          "
-        >
-          LONDON LIGHTING
-        </div>
-      </section>
-
-      <section
-        style="
-          background-color: black;
-          color: white;
-          text-align: center;
-          padding-top: 50px;
-          padding-bottom: 50px;
-          font-family: Arial, sans-serif;
-        "
-      >
-        <h2
-          style="
-            font-size: 20px;
-            font-weight: normal;
-            margin-bottom: 40px;
-            padding-left: 50px;
-            padding-right: 50px;
-          "
-        >
-          London Lighting, based in East London, is a leading lighting
-          production company known for illuminating music videos, commercials,
-          and fashion shoots across the UK. We've worked with top artists like
-          Ed Sheeran and brands like Creed, combining special effects and
-          cutting-edge technology to set ourselves apart. Our team has rapidly
-          expanded, offering a blend of creativity and technical expertise,
-          making us a go-to for high-impact, visually stunning projects
-          nationwide. We're dedicated to pushing creative boundaries.
-        </h2>
-
-        <div></div>
-        <div
-          style="
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-          "
-        >
-          <div style="text-align: center">
-            <img
-              src="images/jordan.jpg"
-              alt="Portrait of Isidora Rutta"
-              style="width: 300px; height: 400px; object-fit: cover"
-            />
-            <div style="font-size: 24px; margin-top: 10px">JORDAN YOUNG</div>
-            <div style="font-size: 18px; color: #cccccc">CEO CO-FOUNDER</div>
-          </div>
-          <div style="text-align: center">
-            <img
-              src="images/chad.jpg"
-              alt="Portrait of Nick Turner"
-              style="width: 300px; height: 400px; object-fit: cover"
-            />
-            <div style="font-size: 24px; margin-top: 10px">CHAD MORRIS</div>
-            <div style="font-size: 18px; color: #cccccc">CEO CO-FOUNDER</div>
-          </div>
-          <div style="text-align: center">
-            <img
-              src="images/john.jpg"
-              alt="Portrait of Ron Bradley"
-              style="width: 300px; height: 400px; object-fit: cover"
-            />
-            <div style="font-size: 24px; margin-top: 10px">JOHNFA KOKE</div>
-            <div style="font-size: 18px; color: #cccccc">
-              MANAGEMENT & PRODUCTION
-            </div>
-          </div>
-          <div style="text-align: center">
-            <img
-              src="images/isans.jpg"
-              alt="Portrait of Sofia Brown"
-              style="width: 300px; height: 400px; object-fit: cover"
-            />
-            <div style="font-size: 24px; margin-top: 10px">ISMAH ANSARI</div>
-            <div style="font-size: 18px; color: #cccccc">SPRARK & 1AD</div>
-          </div>
-        </div>
-      </section>
 
       <section
         id="masterclass"
         style="
           color: white;
-          padding: 50px 50px 150px 50px;
+          padding: 5vw; /* Relative padding */
           font-family: Arial, sans-serif;
           display: flex;
-          flex-wrap: nowrap;
+          flex-wrap: wrap; /* Allow items to wrap on smaller screens */
           justify-content: space-between;
-          align-items: stretch;
+          align-items: center;
           position: relative;
           overflow: hidden;
         "
@@ -1801,8 +1751,8 @@
           "
         ></div>
 
-        <div style="flex: 1; min-width: 300px; margin-right: 20px">
-          <h1 style="font-size: 50px; line-height: 1.2; margin: 0">
+        <div style="flex: 1; min-width: 300px; margin-right: 20px; z-index: 1">
+          <h1 style="font-size: 4vw; line-height: 1.2; margin: 0">
             UNLOCK CREATIVITY,<br />
             MASTER FILMMAKING,<br />
             <span style="color: orange">MASTERCLASS</span> AWAITS.
@@ -1814,12 +1764,13 @@
             style="
               display: inline-block;
               margin-top: 20px;
-              padding: 10px 20px;
+              padding: 1vw 2vw; /* Relative padding */
               background-color: #000000;
               color: rgb(255, 255, 255);
               text-decoration: none;
               font-weight: bold;
               border-radius: 5px;
+              font-size: 1.5vw; /* Relative font size */
               transition: background-color 0.3s;
             "
             onmouseover="this.style.backgroundColor='#FFA500';"
@@ -1828,28 +1779,8 @@
             Enquire
           </a>
         </div>
-
-        <div
-          style="
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            align-items: center;
-            height: auto;
-          "
-        >
-          <p
-            style="
-              font-size: 16px;
-              line-height: 1.5;
-              margin-top: 0;
-              height: 100%;
-              display: flex;
-              align-items: center;
-            "
-          ></p>
-        </div>
       </section>
+
       <section
         style="
           background-color: #121212;

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>London Lighting - Lighting up somewhere near you!</title>
+    <link rel="icon" href="" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#212322" />
+    <meta name="author" content="Pixavio Studio" />
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://cdn.plyr.io" />
+    <link rel="preconnect" href="https://player.vimeo.com/" />
+    <link rel="preconnect" href="https://d33wubrfki0l68.cloudfront.net" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer="defer"></script>
+    <meta name="turbo-cache-control" content="no-cache" />
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-F0Q91S995X"
+    ></script>
+    <meta
+      property="og:title"
+      content="London Lighting - Lighting up somewhere near you!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    <meta
+      name="twitter:description"
+      content="London Lighting - Lighting up somewhere near you!"
+    />
+    <meta
+      name="twitter:title"
+      content="London Lighting - Lighting up somewhere near you!"
+    />
+    <meta name="twitter:image" content="" />
+    <style>
+      /* Keyframes for sliding animation from left to right */
+      @keyframes slideText {
+        0% {
+          transform: translateX(0); /* Start on the screen from the left */
+        }
+        100% {
+          transform: translateX(-100%); /* Slide off-screen to the right */
+        }
+      }
+    </style>
+    <style>
+      /* Hide the section on screens with a max width of 768px (common breakpoint for tablets and phones) */
+      @media (max-width: 768px) {
+        .hide-on-mobile {
+          display: none;
+        }
+      }
+    </style>
+    <style>
+      /* Prevent horizontal scrolling for the entire page */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Hides horizontal overflow */
+        width: 100%; /* Ensures no elements extend beyond the viewport */
+      }
+
+      /* Ensure all elements respect the width of the viewport */
+      * {
+        box-sizing: border-box; /* Include padding and borders in width/height */
+      }
+
+      /* Wrapper for sliding text to prevent it from causing horizontal scroll */
+      .sliding-text-container {
+        position: relative; /* Position context for absolute positioned child */
+        overflow: hidden; /* Hide any overflow that extends outside the container */
+        width: 100%; /* Ensures it fits the viewport */
+      }
+
+      /* Animated sliding text */
+      .sliding-text {
+        position: absolute; /* Take out of document flow */
+        white-space: nowrap; /* Prevent line breaks */
+        animation: slide 10s linear infinite; /* Infinite sliding animation */
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(100%); /* Start off the screen on the right */
+        }
+        100% {
+          transform: translateX(-100%); /* Slide off the screen on the left */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="sitle-site">
+      London Lighting - Lighting up somewhere near you!
+    </h1>
+    <div class="load-cont">
+      <div
+        class="bg-color"
+        style="
+          background-color: black;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      ></div>
+
+      <div class="layers">
+        <div class="layers__item">
+          <div class="layers__item-img img1"></div>
+        </div>
+        <div class="layers__item">
+          <div class="layers__item-img img2"></div>
+        </div>
+        <div class="layers__item">
+          <div class="layers__item-img img3"></div>
+        </div>
+        <div class="layers__item">
+          <div class="layers__item-img img4"></div>
+        </div>
+        <div class="layers__item">
+          <div class="layers__item-img img5"></div>
+        </div>
+        <div class="layers__item">
+          <div class="layers__item-img img6"></div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-cont">
+      <div class="relav">
+        <div class="logo-cont">
+          <a href="/" style="text-decoration: none">
+            <span style="font-size: 17px; font-weight: bold; color: white"
+              >LONDON LIGHTING</span
+            >
+          </a>
+        </div>
+        <div class="menu-options">
+          <div class="cent">
+            <div class="menu-li">
+              <p class="first principal">Services</p>
+              <div class="sub-options">
+                <a href="/brand.html"><p>BRANDING</p></a
+                ><a href="/events.html"><p>EVENTS</p></a
+                ><a href="/lighting.html"><p>LIGHTING SERVICES</p></a
+                ><a href="/music.html"><p>MUSIC VIDEOS</p></a
+                ><a href="/music.html"><p>FILM</p></a>
+              </div>
+            </div>
+            <a class="menu-li" href="/about.html">
+              <p class="principal">About Us</p>
+            </a>
+            <a
+              class="menu-li"
+              href="https://londonlightingmasterclass.co.uk/"
+              target="_blank"
+              ><p class="principal">MASTERCLASS</p></a
+            >
+            <a
+              class="menu-li"
+              href="https://www.instagram.com/cosmos_studios1/?hl=en-gb"
+              target="_blank"
+              ><p class="principal">COSMOS STUDIOS</p></a
+            ><a
+              class="menu-li"
+              href="https://www.instagram.com/londonlighting10/"
+              target="_blank"
+              ><p class="principal">instagram</p></a
+            ><a class="menu-li" href="/contact.html"
+              ><p class="principal">Contact us</p></a
+            >
+          </div>
+        </div>
+        <div class="icon-cont" id="open-menu">
+          <img src="images/open-menu.svg" alt="Menu" />
+        </div>
+      </div>
+    </div>
+    <div class="menu-overlay">
+      <div class="close-cont">
+        <img id="close-menu" src="images/close.svg" alt="Close" />
+      </div>
+      <div class="menu-options">
+        <div class="columns">
+          <div class="column">
+            <div class="first-row">
+              <h3>Services</h3>
+              <a href="/brand.html"><p>BRANDING</p></a
+              ><a href="/events.html"><p>EVENTS</p></a
+              ><a href="/lighting.html"><p>LIGHTING SERVICES</p></a
+              ><a href="/music.html"><p>MUSIC VIDEOS</p></a
+              ><a href="/music.html"><p>FILM</p></a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="first-row">
+              <a href="/about.html"><h3 class="sub">About Us</h3></a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="first-row">
+              <a href="https://londonlightingmasterclass.co.uk/" target="_blank"
+                ><h3 class="sub">MASTERCLASS</h3></a
+              >
+            </div>
+          </div>
+          <div class="column">
+            <div class="first-row">
+              <a
+                href="https://www.instagram.com/cosmos_studios1/?hl=en-gb"
+                target="_blank"
+                ><h3 class="sub">COSMOS<br />STUDIOS</h3></a
+              >
+            </div>
+          </div>
+          <div class="column">
+            <div class="first-row">
+              <a
+                href="https://www.instagram.com/londonlighting10/"
+                target="_blank"
+                ><h3 class="sub">instagram</h3></a
+              >
+            </div>
+          </div>
+          <div class="column">
+            <div class="first-row">
+              <a href="/contact.html"><h3 class="sub">Contact</h3></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-scroll-container="">
+      <section
+        style="
+          background-color: black;
+          color: #ffa500;
+          text-align: center;
+          padding: 5vh 2vw; /* Use viewport-based units for padding */
+          font-family: Arial, sans-serif;
+          position: relative; /* Use relative positioning for proper alignment */
+        "
+      >
+        <!-- Placeholder div for additional content -->
+        <div
+          style="
+            font-size: 1.2rem; /* Use rem for font size */
+            font-weight: normal;
+            letter-spacing: normal;
+            position: absolute;
+            top: 10px; /* Adjusted for responsiveness */
+            right: 20px;
+            color: white;
+          "
+        ></div>
+
+        <!-- Main content container -->
+        <div
+          style="
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 3vh 0; /* Use viewport-based units for padding */
+            font-family: Arial, sans-serif;
+          "
+        >
+          <h2
+            style="
+              font-size: 6vw; /* Use vw for font size to adjust with viewport */
+              font-weight: normal;
+              margin-bottom: 4vh; /* Use viewport-based units for margin */
+            "
+          >
+            ABOUT US
+          </h2>
+        </div>
+
+        <!-- Title text with responsive font size -->
+        <div
+          style="
+            font-size: 12vw; /* Use vw for font size for responsiveness */
+            font-weight: bold;
+            letter-spacing: -0.2vw; /* Adjust letter spacing */
+            line-height: 1.1; /* Improve line height for better readability */
+          "
+        >
+          LONDON LIGHTING
+        </div>
+      </section>
+
+      <section
+        style="
+          background-color: black;
+          color: white;
+          text-align: center;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          font-family: Arial, sans-serif;
+        "
+      >
+        <h2
+          style="
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 40px;
+            padding-left: 50px;
+            padding-right: 50px;
+          "
+        >
+          London Lighting, based in East London, is a leading lighting
+          production company known for illuminating music videos, commercials,
+          and fashion shoots across the UK. We've worked with top artists like
+          Ed Sheeran and brands like Creed, combining special effects and
+          cutting-edge technology to set ourselves apart. Our team has rapidly
+          expanded, offering a blend of creativity and technical expertise,
+          making us a go-to for high-impact, visually stunning projects
+          nationwide. We're dedicated to pushing creative boundaries.
+        </h2>
+
+        <div></div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+          "
+        >
+          <div style="text-align: center">
+            <img
+              src="images/jordan.jpg"
+              alt="Portrait of Isidora Rutta"
+              style="width: 300px; height: 400px; object-fit: cover"
+            />
+            <div style="font-size: 24px; margin-top: 10px">JORDAN YOUNG</div>
+            <div style="font-size: 18px; color: #cccccc">CEO CO-FOUNDER</div>
+          </div>
+          <div style="text-align: center">
+            <img
+              src="images/chad.jpg"
+              alt="Portrait of Nick Turner"
+              style="width: 300px; height: 400px; object-fit: cover"
+            />
+            <div style="font-size: 24px; margin-top: 10px">CHAD MORRIS</div>
+            <div style="font-size: 18px; color: #cccccc">CEO CO-FOUNDER</div>
+          </div>
+          <div style="text-align: center">
+            <img
+              src="images/john.jpg"
+              alt="Portrait of Ron Bradley"
+              style="width: 300px; height: 400px; object-fit: cover"
+            />
+            <div style="font-size: 24px; margin-top: 10px">JOHNFA KOKE</div>
+            <div style="font-size: 18px; color: #cccccc">
+              MANAGEMENT & PRODUCTION
+            </div>
+          </div>
+          <div style="text-align: center">
+            <img
+              src="images/isans.jpg"
+              alt="Portrait of Sofia Brown"
+              style="width: 300px; height: 400px; object-fit: cover"
+            />
+            <div style="font-size: 24px; margin-top: 10px">ISMAH ANSARI</div>
+            <div style="font-size: 18px; color: #cccccc">SPRARK & 1AD</div>
+          </div>
+        </div>
+      </section>
+      <section
+        style="
+          background-color: #121212;
+          color: white;
+          padding: 50px 20px;
+          text-align: center;
+          font-family: Arial, sans-serif;
+        "
+      >
+        <h1 style="font-size: 3rem; margin-bottom: 20px; color: orange">
+          OUR OFFICIAL STATEMENT
+        </h1>
+        <p
+          style="
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+          "
+        >
+          At <span style="color: orange">London Lighting</span>, we believe that
+          the right lighting can transform any space or event into an
+          unforgettable experience. Based in London, we specialise in creating
+          innovative, bespoke lighting solutions for a wide range of industries,
+          including film, music videos, corporate events, and live performances.
+        </p>
+        <p
+          style="
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+          "
+        >
+          Our team of expert lighting designers, technicians, and production
+          specialists are passionate about delivering high-quality lighting that
+          not only illuminates but enhances the mood, atmosphere, and overall
+          experience of any project. Whether you're hosting a large-scale event
+          or filming your next music video, we're here to bring your vision to
+          life with precision and creativity.
+        </p>
+        <p
+          style="
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+          "
+        >
+          Our mission is simple: to provide unparalleled service and create
+          lighting designs that leave a lasting impression. With years of
+          industry experience and cutting-edge equipment,
+          <span style="color: orange">London Lighting</span> is your trusted
+          partner for all things lighting production.
+        </p>
+        <p
+          style="
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+          "
+        >
+          We take pride in our commitment to innovation, customer satisfaction,
+          and delivering results that exceed expectations. Let’s work together
+          to make your next project shine.
+        </p>
+      </section>
+
+      <section
+        id="masterclass"
+        style="
+          color: white;
+          padding: 50px 50px 150px 50px;
+          font-family: Arial, sans-serif;
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: stretch;
+          position: relative;
+          overflow: hidden;
+        "
+      >
+        <!-- Background Image -->
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('media/mcc.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+          "
+        ></div>
+
+        <div style="flex: 1; min-width: 300px; margin-right: 20px">
+          <h1 style="font-size: 50px; line-height: 1.2; margin: 0">
+            UNLOCK CREATIVITY,<br />
+            MASTER FILMMAKING,<br />
+            <span style="color: orange">MASTERCLASS</span> AWAITS.
+          </h1>
+
+          <a
+            href="https://londonlightingmasterclass.co.uk/"
+            target="_blank"
+            style="
+              display: inline-block;
+              margin-top: 20px;
+              padding: 10px 20px;
+              background-color: #000000;
+              color: rgb(255, 255, 255);
+              text-decoration: none;
+              font-weight: bold;
+              border-radius: 5px;
+              transition: background-color 0.3s;
+            "
+            onmouseover="this.style.backgroundColor='#FFA500';"
+            onmouseout="this.style.backgroundColor='#000000';"
+          >
+            Enquire
+          </a>
+        </div>
+
+        <div
+          style="
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            height: auto;
+          "
+        >
+          <p
+            style="
+              font-size: 16px;
+              line-height: 1.5;
+              margin-top: 0;
+              height: 100%;
+              display: flex;
+              align-items: center;
+            "
+          ></p>
+        </div>
+      </section>
+      <section
+        style="
+          background-color: #121212;
+          color: #ffffff;
+          font-family: Arial, sans-serif;
+          padding: 0 20px;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              max-width: 1200px;
+              width: 100%;
+            "
+          >
+            <div style="flex: 1; padding-right: 20px">
+              <h2 style="font-size: 14px; color: #a0a0a0; margin-bottom: 10px">
+                WHAT IS THE MASTERCLASS?
+              </h2>
+              <h1 style="font-size: 48px; line-height: 1.2; margin: 0">
+                4+ years of<br />filmmaking expertise.<br /><span
+                  style="color: #ffa500"
+                  >Hand-picked courses</span
+                ><br />for your development.
+              </h1>
+              <div style="display: flex; align-items: center; margin-top: 20px">
+                <div
+                  style="
+                    background-color: #ffa500;
+                    color: #ffffff;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 10px;
+                  "
+                >
+                  <i class="fas fa-arrow-right" style="font-size: 20px"></i>
+                </div>
+                <a
+                  style="color: #ffa500"
+                  href="https://londonlightingmasterclass.co.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Click Here to Learn More</a
+                >
+              </div>
+            </div>
+            <div style="flex: 1; position: relative">
+              <video
+                controls
+                style="
+                  width: 100%;
+                  border-radius: 10px;
+                  background-color: black;
+                "
+              >
+                <source src="media/llm.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+
+  <script>
+    document.querySelector(
+      "#qodef-page-content > div > div > div > div > div > section.elementor-section.elementor-top-section.elementor-element.elementor-element-de9cc9d.elementor-section-full_width.qodef-in-focus.elementor-section-height-default.elementor-section-height-default.qodef-elementor-content-no"
+    );
+  </script>
+
+  <script
+    src="https://static.elfsight.com/platform/platform.js"
+    data-use-service-core
+    defer
+  ></script>
+  <div
+    class="elfsight-app-27e88bc5-886d-47cb-8c93-dcebc410b60d"
+    data-elfsight-app-lazy
+  ></div>
+</html>
